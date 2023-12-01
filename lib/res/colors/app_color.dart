@@ -26,6 +26,8 @@ class AppColor {
   static const Color textfieldcolor = Color(0xffFAFAFA);
   static const Color greyColor = Color.fromARGB(255, 146, 144, 144);
   static const Color yellowColor = Color.fromARGB(255, 241, 238, 19);
+  static const Color blueColor = Color.fromARGB(255, 19, 41, 241);
+
 
 
 }

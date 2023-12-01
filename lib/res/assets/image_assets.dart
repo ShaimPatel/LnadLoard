@@ -55,7 +55,7 @@ class ImageAssets {
   static const String prs = 'images/companyLogo/prs.png';
   static const String rla = 'images/companyLogo/rla.png';
   static const String xp = 'images/companyLogo/xp.png';
-  static const String rzoopla = 'images/companyLogo/zoopla.png';
+  static const String zoopla = 'images/companyLogo/zoopla.png';
 
   static const String technosysinfowareltd =
       'images/companyLogo/technosysinfowareltd.jpg';
