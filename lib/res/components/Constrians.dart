@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landloard/res/colors/app_color.dart';
 
 const customGradient1 = LinearGradient(
     colors: [
@@ -17,41 +18,38 @@ const customGradient2 = LinearGradient(
     stops: [0.0, 1.0],
     tileMode: TileMode.clamp);
 
-// Widget TextField_Design(
-//     String text, String hint, TextEditingController controller , bool enable) {
-//   return Column(
-//     crossAxisAlignment: CrossAxisAlignment.start,
-//     children: [
-//       Padding(
-//         padding: const EdgeInsets.only(left: 6, top: 8),
-//         child: Text(text,
-//             style: const TextStyle(
-//               fontSize: 17,
-//               fontWeight: FontWeight.w400,
-//               color: AppColor.LiteGray,
-//             )),
-//       ),
-//       Container(
-//         margin: const EdgeInsets.symmetric(vertical: 16),
-//         child: TextField(
-//           controller: controller,
-//           textAlign: TextAlign.start,
-//           decoration: InputDecoration(
-//             hintText: hint,
-//             enabled: enable,
-//             hintStyle: const TextStyle(
-//                 fontWeight: FontWeight.w400,
-//                 fontSize: 17,
-//                 color: AppColor.gray_03),
-//             border: const OutlineInputBorder(
-//               borderSide: BorderSide(color: Colors.grey, width: 0.0),
-//             ),
-//           ),
-//         ),
-//       ),
-//     ],
-//   );
-// }
+Widget TextField_Design(
+    String text, String hint, TextEditingController controller, bool enable) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(text,
+          style: const TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w400,
+            color: AppColor.greenColor,
+          )),
+      Container(
+        margin: const EdgeInsets.symmetric(vertical: 3),
+        child: TextField(
+          controller: controller,
+          textAlign: TextAlign.start,
+          decoration: InputDecoration(
+            hintText: hint,
+            enabled: enable,
+            hintStyle: const TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 17,
+                color: AppColor.forgrButtonColor),
+            border: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey, width: 0.0),
+            ),
+          ),
+        ),
+      ),
+    ],
+  );
+}
 
 // Widget TextField_Design2(
 //     String text,
@@ -276,54 +274,54 @@ const customGradient2 = LinearGradient(
 //   );
 // }
 
-// Widget App_Bar(BuildContext context, String title) {
-//   return AppBar(
-//     title: Padding(
-//       padding: const EdgeInsets.only(top: 28),
-//       child: Text(
-//         title,
-//         style: const TextStyle(
-//             fontSize: 24,
-//             fontWeight: FontWeight.w500,
-//             color: Color(0xffFFFFFF)),
-//       ),
-//     ),
-//     leading: GestureDetector(
-//       onTap: () {
-//         Navigator.of(context).pop();
-//       },
-//       child: const Padding(
-//         padding: EdgeInsets.only(top: 28),
-//         child: Icon(
-//           Icons.arrow_back_ios, // add custom icons also
-//         ),
-//       ),
-//     ),
-//   );
-// }
+Widget App_Bar(BuildContext context, String title) {
+  return AppBar(
+    title: Padding(
+      padding: const EdgeInsets.only(top: 28),
+      child: Text(
+        title,
+        style: const TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+            color: Color(0xffFFFFFF)),
+      ),
+    ),
+    leading: GestureDetector(
+      onTap: () {
+        Navigator.of(context).pop();
+      },
+      child: const Padding(
+        padding: EdgeInsets.only(top: 28),
+        child: Icon(
+          Icons.arrow_back_ios, // add custom icons also
+        ),
+      ),
+    ),
+  );
+}
 
-// Widget Elevated_Button(String bText, Function() onpress, double value,
-//     double fontSize, Color tColor, Color bColor, double borderRadius) {
-//   return Container(
-//     width: value,
-//     decoration: BoxDecoration(
-//       borderRadius: BorderRadius.circular(borderRadius),
-//       color: bColor,
-//     ),
-//     child: TextButton(
-//       style: TextButton.styleFrom(
-//         foregroundColor: Colors.white,
-//         textStyle: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
-//       ),
-//       onPressed: onpress,
-//       child: Text(
-//         bText,
-//         style: TextStyle(
-//             fontSize: fontSize, fontWeight: FontWeight.w600, color: tColor),
-//       ),
-//     ),
-//   );
-// }
+Widget Elevated_Button(String bText, Function() onpress, double value,
+    double fontSize, Color tColor, Color bColor, double borderRadius) {
+  return Container(
+    width: value,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(borderRadius),
+      color: bColor,
+    ),
+    child: TextButton(
+      style: TextButton.styleFrom(
+        foregroundColor: Colors.white,
+        textStyle: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
+      ),
+      onPressed: onpress,
+      child: Text(
+        bText,
+        style: TextStyle(
+            fontSize: fontSize, fontWeight: FontWeight.w600, color: tColor),
+      ),
+    ),
+  );
+}
 
 // Widget DashboardTitle(String title, double fontSize) {
 //   return Padding(

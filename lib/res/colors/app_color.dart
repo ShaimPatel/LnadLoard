@@ -25,5 +25,7 @@ class AppColor {
   static const Color forgrButtonColor = Color(0xff424242);
   static const Color textfieldcolor = Color(0xffFAFAFA);
   static const Color greyColor = Color.fromARGB(255, 146, 144, 144);
+  static const Color yellowColor = Color.fromARGB(255, 241, 238, 19);
+
 
 }

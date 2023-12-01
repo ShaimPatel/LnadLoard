@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
+import 'package:landloard/views/ContactUs%20Page/contact_us_page.dart';
+import 'package:landloard/views/HomePage/home_page.dart';
 
 class CustomDrawerWidget extends StatelessWidget {
   const CustomDrawerWidget({super.key});
@@ -34,7 +36,8 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (contex) => const HomePage()));
             },
           ),
 
@@ -236,7 +239,8 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (contex) => const ContactUsPage()));
             },
           ),
         ],

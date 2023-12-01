@@ -23,6 +23,9 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       endDrawer: const CustomDrawerWidget(),
+      body: Container(
+        color: Colors.red,
+      ),
     );
   }
 }
