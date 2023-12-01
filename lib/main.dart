@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/splash_page.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: AppColor.greenColor,
       ),
       home: const SplashPage(),
     );

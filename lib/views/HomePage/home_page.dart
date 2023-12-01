@@ -1,5 +1,6 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter/material.dart';
+import 'package:landloard/global/AppBar/drawer_widget.dart';
+import 'package:landloard/res/assets/image_assets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +12,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Image(
+          image: AssetImage(
+            ImageAssets.smartlink,
+          ),
+          height: 160,
+          width: 160,
+        ),
+      ),
+      endDrawer: const CustomDrawerWidget(),
+    );
   }
 }
