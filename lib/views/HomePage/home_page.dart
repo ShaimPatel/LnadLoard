@@ -2,9 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:landloard/global/AppBar/drawer_widget.dart';
-import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
+import 'package:landloard/views/HomePage/widgets/featured_properties_widget.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -174,50 +174,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               //!2 Section for Featured Properties
-              Container(
-                height: MediaQuery.of(context).size.height * 0.7,
-                width: double.maxFinite,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                ),
-                child: Column(
-                  children: [
-                    const SizedBox(height: 50),
-                    const Text(
-                      "Featured Properties",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: AppColor.whiteColor,
-                        fontSize: 20,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    CustomeDividerWidget(
-                      height: 1,
-                      color: AppColor.greyColor,
-                      thickness: 2,
-                      indent: 20,
-                      endIndent: 20,
-                    ),
-                    Expanded(
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 3,
-                        itemBuilder: (context, index) {
-                          return Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 500,
-                              width: 200,
-                              color: Colors.red,
-                            ),
-                          );
-                        },
-                      ),
-                    )
-                  ],
-                ),
-              )
+              const FeaturedPropertiesWidget(),
             ],
           ),
         ));
