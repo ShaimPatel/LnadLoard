@@ -323,6 +323,38 @@ Widget Elevated_Button(String bText, Function() onpress, double value,
   );
 }
 
+Widget elevatedBorderButton(
+    String bText,
+    Function() onpress,
+    double value,
+    double fontSize,
+    Color tColor,
+    Color bColor,
+    double borderRadius,
+    Color boderColor) {
+  return Container(
+    width: value,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(borderRadius),
+      border: Border.all(
+        color: boderColor,
+      ),
+      color: bColor,
+    ),
+    child: TextButton(
+      style: TextButton.styleFrom(
+        foregroundColor: Colors.white,
+        textStyle: TextStyle(fontSize: fontSize, fontWeight: FontWeight.w600),
+      ),
+      onPressed: onpress,
+      child: Text(
+        bText,
+        style: TextStyle(
+            fontSize: fontSize, fontWeight: FontWeight.w600, color: tColor),
+      ),
+    ),
+  );
+}
 // Widget DashboardTitle(String title, double fontSize) {
 //   return Padding(
 //     padding: const EdgeInsets.symmetric(vertical: 22),

@@ -1,11 +1,44 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:landloard/global/AppBar/drawer_widget.dart';
 import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 
-class AboutUsPage extends StatelessWidget {
+class AboutUsPage extends StatefulWidget {
   const AboutUsPage({super.key});
+
+  @override
+  State<AboutUsPage> createState() => _AboutUsPageState();
+}
+
+class _AboutUsPageState extends State<AboutUsPage> {
+//!
+  final ScrollController scrollController = ScrollController();
+  bool _isVisible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    scrollController.addListener(() {
+      if (scrollController.position.userScrollDirection ==
+          ScrollDirection.reverse) {
+        setState(() {
+          _isVisible = true;
+        });
+      } else if (scrollController.position.userScrollDirection ==
+          ScrollDirection.forward) {
+        setState(() {
+          _isVisible = false;
+        });
+      }
+    });
+  }
+
+  void scrollToTop() {
+    scrollController.animateTo(0.0,
+        duration: const Duration(milliseconds: 300), curve: Curves.bounceInOut);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +53,15 @@ class AboutUsPage extends StatelessWidget {
           ),
         ),
         endDrawer: const CustomDrawerWidget(),
+        floatingActionButton: _isVisible
+            ? FloatingActionButton(
+                onPressed: scrollToTop,
+                child: const Icon(Icons.arrow_upward),
+              )
+            : null,
         body: SingleChildScrollView(
+          controller: scrollController,
+          physics: const BouncingScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.only(left: 10, right: 5),
             child: Column(
