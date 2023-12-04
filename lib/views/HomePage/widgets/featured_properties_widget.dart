@@ -10,7 +10,7 @@ class FeaturedPropertiesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.95,
+      height: MediaQuery.of(context).size.height * 0.90,
       width: double.maxFinite,
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -254,7 +254,6 @@ class FeaturedPropertiesWidget extends StatelessWidget {
             AppColor.greenColor,
             25,
           ),
-          const SizedBox(height: 10),
         ],
       ),
     );
