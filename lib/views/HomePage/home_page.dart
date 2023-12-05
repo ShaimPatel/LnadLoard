@@ -161,7 +161,11 @@ class _HomePageState extends State<HomePage> {
                                   const SalesWidget(),
                                   // Content for Tab A2
                                   Container(
-                                    color: Colors.grey[300],
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[300],
+                                        borderRadius: const BorderRadius.only(
+                                            bottomLeft: Radius.circular(20),
+                                            bottomRight: Radius.circular(20))),
                                     child: const Center(
                                       child: Text('Connect for rent'),
                                     ),
@@ -257,10 +261,10 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: AppColor.greenColor,
-                        fontSize: 20,
+                        fontSize: 25,
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 25),
                     CustomeDividerWidget(
                       height: 1,
                       color: AppColor.greyColor,
@@ -268,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                       indent: 20,
                       endIndent: 20,
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 40),
                     //!
                     SizedBox(
                       height: 300,
