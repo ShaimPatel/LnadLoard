@@ -5,7 +5,11 @@ import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/AboutUs%20Page/about_us_page.dart';
 import 'package:landloard/views/ContactUs%20Page/contact_us_page.dart';
 import 'package:landloard/views/HomePage/home_page.dart';
+import 'package:landloard/views/Properties%20Page/commercial_page.dart';
+import 'package:landloard/views/Properties%20Page/international_page.dart';
 import 'package:landloard/views/Properties%20Page/sales_page.dart';
+
+import '../../views/Properties Page/lettings_page.dart';
 
 class CustomDrawerWidget extends StatelessWidget {
   const CustomDrawerWidget({super.key});
@@ -80,19 +84,22 @@ class CustomDrawerWidget extends StatelessWidget {
                     ListTile(
                       title: const Text('Lettings'),
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (contex) => const LattingsPage()));
                       },
                     ),
                     ListTile(
                       title: const Text('Commercial'),
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (contex) => const CommercialPage()));
                       },
                     ),
                     ListTile(
                       title: const Text('International'),
                       onTap: () {
-                        Navigator.pop(context);
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (contex) => const InternationalPage()));
                       },
                     ),
                   ],

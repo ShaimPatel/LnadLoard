@@ -5,7 +5,6 @@ import 'package:landloard/global/Widgets/progress_dialog.dart';
 import '../colors/app_color.dart';
 
 class Utils {
-  
   static void fieldFocusChange(
       BuildContext context, FocusNode current, FocusNode nextFocus) {
     current.unfocus();
@@ -32,7 +31,7 @@ class Utils {
     );
   }
 
-  static void showCircularDialog(BuildContext context) {
+  static showCircularDialog(BuildContext context) {
     showDialog(
       barrierDismissible: false,
       context: context,

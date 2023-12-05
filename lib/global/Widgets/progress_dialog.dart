@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landloard/res/assets/image_assets.dart';
 
 class ProgressDialog extends StatelessWidget {
   const ProgressDialog({super.key});
@@ -12,7 +13,7 @@ class ProgressDialog extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(10),
           child: Image.asset(
-            'images/Loader_3.gif',
+            ImageAssets.loader,
             height: 50.0,
             width: 50.0,
           ),
