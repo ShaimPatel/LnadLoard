@@ -44,6 +44,9 @@ class ImageAssets {
 
   static const String welcomeSmartLink = 'images/welcome-smart-link.svg';
 
+  static const String wrongImage = 'images/F_OTP.png';
+  static const String correctImage = 'images/T_OTP.png';
+
   //! CompanyLogos
   static const String clientMoney = 'images/companyLogo/clientMoney.png';
   static const String dps = 'images/companyLogo/dps.png';
