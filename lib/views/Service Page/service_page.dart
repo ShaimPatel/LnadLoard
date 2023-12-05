@@ -74,6 +74,7 @@ class _ServicePageState extends State<ServicePage> {
             )
           : null,
       body: SingleChildScrollView(
+        controller: _scrollController,
         scrollDirection: Axis.vertical,
         physics: const BouncingScrollPhysics(),
         child: Column(

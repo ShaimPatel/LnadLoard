@@ -5,6 +5,7 @@ import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/AboutUs%20Page/about_us_page.dart';
 import 'package:landloard/views/ContactUs%20Page/contact_us_page.dart';
 import 'package:landloard/views/HomePage/home_page.dart';
+import 'package:landloard/views/LandLord%20Page/landlord_page.dart';
 import 'package:landloard/views/Properties%20Page/commercial_page.dart';
 import 'package:landloard/views/Properties%20Page/international_page.dart';
 import 'package:landloard/views/Properties%20Page/sales_page.dart';
@@ -165,7 +166,8 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (contex) => LandLoardPage()));
             },
           ),
           CustomeDividerWidget(
