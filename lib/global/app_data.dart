@@ -71,6 +71,7 @@ class AppData {
     }
   ];
 
+//! landlordFaq 
   static const List<Map<String, String>> landlordFaq = [
     {
       "heading":
@@ -672,6 +673,209 @@ class AppData {
           """<p>The landlord is responsible for the payment of ground rent and service charges (but not utilities) throughout the tenancy. Where we are instructed to manage the property, arrangements may be made for such payments to be de-ducted from rents received.</p>"""
     },
   ];
+
+//!Tenants Letting Guide
+  static const tenantHelp = [
+    {
+      "heading": "<b>Your Offer</b>",
+      "description":
+          """ <p>Once we have found you a suitable property, you will be in a position to make an offer to the landlord for consideration. Any offers that you make are subject to you fulfilling our reference criteria. At this point, you will be requested to pay a Holding Deposit fee enabling you to secure the property and get it off the market. In the event of unsatisfactory referencing or a change of heart, this fee is non-returnable. Our process is to make the process hassle-free for you, and to secure a rate that works with your budget and needs.</p>""",
+    },
+    {
+      "heading": "<b>Agreeing The Tenancy</b>",
+      "description":
+          """ <p><span>When your offer has been accepted by the landlord we will apply for references and
+      draw up the relevant documentation which will form the basis of the agreement between you and the landlord.
+      You will be expected to provide:</span></p>
+  <ul class="c21 lst-kix_list_9-0 start">
+    <li class="c37 li-bullet-0"><span class="c4">Identification/Proof of residency</span></li>
+    <li class="c25 c42 li-bullet-0"><span class="c4">Passport</span></li>
+    <li class="c25 c42 li-bullet-0"><span class="c4">Full driving license all tenants must show proof of address.
+            Only the following forms are accepted:</span></li>
+  </ul>
+  <ul class="c21 lst-kix_list_9-1 start">
+    <li class="c25 c48 li-bullet-0"><span class="c4">Utility bill (less than 3 months old)</span></li>
+    <li class="c25 c48 li-bullet-0"><span class="c4">Full driving license</span></li>
+    <li class="c25 c48 li-bullet-0"><span class="c4">Council tax bill (less than 3 months old)</span></li>
+    <li class="c48 c81 li-bullet-0"><span class="c4">Mobile phone bill (less than 3 months old)</span></li>
+  </ul>
+  <p><span>When your offer has been accepted by the landlord we will apply for references and
+        draw up the relevant documentation which will form the basis of the agreement between you and the
+        landlord.</span></p>
+  <p><span>You will also be required to provide a &ldquo;Holding Deposit&rdquo; equivalent to
+        one week of the Monthly rent of the property to stop all further viewings so that the property is secure
+        until all reference and credit checks have been completed for your piece of mind.</span></p>""",
+    },
+    {
+      "heading": "<b>References</b>",
+      "description":
+          """ <p><span>Your employer and your landlord will be contacted (if you are in rented accommodation
+        already. Your previous employer will also be contacted if you have recently changed jobs. If you are
+        self-employed we will need to contact your accountant or provide us with the previous year's Tax return
+        Form. A credit check will also be carried out. To assist in collating the necessary references, it would be
+        advantageous for inform the above individuals in advance that references are required as these can be return
+        within a matter of a few days, barring any delays.</span></p>
+ <p><span>Occasionally, a GUARANTOR will be required if, for example the tenant has not been
+        continuously employed for the past 18 months; has been working abroad in the previous 6 months; the
+        tenants&#39; income falls short of our criteria or the tenants&#39; employment is considered as changeable.
+        Please note that the same criteria applies to the guarantor and, furthermore, the guarantor must earn the
+        equivalent of 3 times the yearly sum of the rent, be in full time employment or be able to prove by bank
+        statements that they have &ldquo;independent means&rdquo;. All tenants should be able to provide a guarantor
+        and should the tenant be unable to provide one, we will decide that the tenant has withdrawn their
+        application. The tenant will therefore forfeit their deposit. The guarantor must be aware that they will
+        stand as guarantor for you, (and your partner if you are moving in to the property with someone else), for
+        the entire occupancy of the property, not just for the period of the initial tenancy term.</span></p>""",
+    },
+    {
+      "heading": "<b>Payment</b>",
+      "description":
+          """ <p><span>Once a moving date has been agreed and references have all been approved by the
+      landlord, the tenancy agreement will need to be signed by all parties and the initial monies in full will
+      become due less any holding deposit previously paid:</span></p>
+ <p><span>This is made up of the following:</span></p>
+ <ul class="c21 lst-kix_list_10-0 start">
+  <li class="c37 li-bullet-0"><span class="c4">Deposit normally equal to five weeks rent.</span></li>
+  <li class="c11 li-bullet-0"><span class="c4">The first month's rent in advance. (rent is worked out on a per
+          calendar month basis), which is, if you are not aware; the weekly rent, multiplied by 52 weeks and
+          divided by twelve months to give the per calendar month rental figure.</span></li>
+ </ul>
+ <p><span>The above monies need to be in a cleared form before the tenancy is able to commence,
+      payment by means of either a banker's draft, cash or paid directly into our client bank account and
+      showing as cleared.</span></p>""",
+    },
+    {
+      "heading": "<b>Tenant Fee's</b>",
+      "description":
+          """ <p><span>Our aim is to be as transparent and honest about our fees as possible which will
+      enable you and help you make informed decisions without any surprises. Monthly Rental Payments: This is paid
+      in advance and your rent will become due by arranged method on the same date every month thereafter.</span>
+ </p>""",
+    },
+    {
+      "heading": "<b>Company Let</b>",
+      "description":
+          """ <p><span>Company applications are acceptable where the company will be paying the rent. Please
+      note that all monies to be paid on the signing of the agreement prior to the occupation and should be paid
+      in cash or by bankers draft, unless they are paid a minimum of seven working days prior to occupancy.</span>
+ </p>""",
+    },
+    {
+      "heading": """ <b>Other Points Of Interest </b>""",
+      "description":
+          """<p><span>The Tenant will be responsible for insuring their own possessions</span></p>
+      <p><span>The Tenant will take over all utilities such as Gas, Electricity, Water/Sewage
+              charges, Council Tax & Telephone upon moving into the property and will be responsible for contacting
+              the relevant suppliers accordingly prior to commencement of the tenancy.</span></p>
+      <p><span>Council Tax charges are assessed according to the status and number of occupants in
+              each property.</span></p>
+      <p><span>The Tenant must Advise ALL relevant utility companies when moving in and out.</span>
+      </p>
+      <p><span>Meter readings should be taken at the start and the end of the tenancy.</span></p>
+      <p><span>The gas / electric / water All companies should be informed of your name and the
+              metre readings submitted to them.</span></p>
+      <p><span>The Landlord is responsible for any repair/maintenance problems to appliances etc.
+              but the Tenant is responsible for any breakages which should be reported immediately.</span></p>
+      <p><span>All emergencies regarding Gas, Electricity, Water can be dealt with by calling your
+              local utility companies who have 24 hour helpline assistance or emergency services, if required.</span></p>
+      <p><span>Decoration of the property must only be done with your Landlord's permission you
+              and your guests are strictly forbidden from smoking in any of our properties.</span></p>
+      <p><span>No pets are allowed unless the Landlord has given written consent Reasonable notice
+              should be given in the event that the Letting Agent or Landlord wishes to inspect the property outside
+              pre-agreed times.</span></p>
+      <p><span>It is usual for the Landlord/Agent to inspect the property at least three times
+              during the term of your Tenancy and the Tenancy Agreement should cover this eventuality.</span></p>
+      <p><span>Most lets are for 12 months, although some Landlords may consider shorter terms of
+              say 6 months.</span></p>
+      <p><span>Should you wish to quit your Tenancy earlier than the agreed term, you will be liable
+              for all rent until the end of the agreed Tenancy. However, it may be worth considering negotiating a BREAK
+              CLAUSE with the Landlord which, for example, could entitle you to give notice after 4 months. In this case,
+              you would only be liable for the rent for the notice period of 2 months, releasing you from the remaining 6
+              months of a 12 month Tenancy.</span></p>
+      <p><span>There is no set law regarding the time limit for returning deposits but this is
+              normally subsequent to the final inspection of the property.</span></p>
+      <p><span>Letting agents generally encourage Landlords to employ a professional inventory agent
+              to conduct the inspection and produce a report as to the condition of the interior at the beginning of the
+              Tenancy and again at the end but this is not obligatory. In most cases, the deposit will be returned once
+              any damages are ascertained by the Tenant/Landlord/Inventory Clerk and appropriate deductions agreed.</span>
+      </p>
+      <p><span>The most common type of Tenancy Agreement is the assured short hold used for 6-12
+              month lets and usually takes the form of a standard contract between both parties. However, should any
+              &quot;extras&quot; be agreed such as certain furnishings to be provided by the Landlord, you should ask that
+              an extra clause be added to the agreement to this effect. It should be noted that the landlord is not
+              obliged to carry out promises so it is important that your requests are documented. The Letting Agent,
+              whilst acting for the Landlord, operates within accepted guidelines in the industry to ensure that you are
+              able to rely on a professional letting agent taking your concerns seriously and advising the Landlord if
+              they are being unreasonable. In this regard, you should be assured that the property conforms to all safety
+              regulations and is fairly priced.</span></p>""",
+    },
+    {
+      "heading": """ <b>Deposit Returns</b>""",
+      "description":
+          """<p><span>When your tenancy ends, an inspection of the property will be carried out, either by
+      the landlord, ourselves or an independent inventory clerk instructed by the landlord.</span></p>""",
+    },
+    {
+      "heading":
+          """<b>Useful Telephone Numbers For Utility Companies And Council Numbers</b>""",
+      "description":
+          """ <p class="c20"><span class="c29">Useful Gas Numbers</span><span><br>National Grid 0845 835
+      1111<br>British Gas 0800 048 0202<br>Scottish Power 0845 270 7008<br>N-Power 0800 316 8558</span></p>
+  <p class="c20"><span class="c29">Useful utility number-Electric</span><span><br>EDF 0800 096
+        9000<br>Southern Electric 0800 107 9639</span></p>
+  <p class="c20"><span class="c29">Useful utility number-Water</span><span><br>Thames Water 0845
+        920 0888</span></p>
+  <p class="c20"><span class="c29">Council tax numbers</span><span><br>Epping Forest Council 01992 564
+        188<br>Waltham Forest 0208 496 3000<br>Redbridge 0208 227 2926<br>Newham 0208 431 2000</span></p>
+  """,
+    },
+    {
+      "heading": """<b>Faq's</b>""",
+      "description":
+          """ <p><span>What is the difference between a Fully Managed property and Let Only? If your
+      property is let fully managed, then our management department will be your first point of contact for all
+      maintenance and repair issues. Let only means that Smart Link Estates are instructed to find tenants for the
+      property and arrange the necessary paperwork, the Landlord then takes over the management and in this setup
+      you would contact the landlord direct.</span></p>""",
+    },
+    {
+      "heading": """<b>What About Pets?</b>""",
+      "description":
+          """ <p><span>Most landlords are not keen on pets and often there will be a clause forbidding pets.
+      Still, if you can&#39;t live without the family pet then please let us know and we will do our utmost to
+      find you a suitable property to let that has no pet restrictions.</span></p>""",
+    },
+    {
+      "heading": """<b>Who Do You Contact For References?</b>""",
+      "description":
+          """<p><span>It is in everyone's interests to ensure that you can comfortably afford the rent
+      on your chosen property. The checks are much as you&#39;d expect (verification of employment, past addresses
+      etc). We will also ask for a bank, employer and previous landlord reference. Sometimes a guarantor may be
+      required.</span></p>""",
+    },
+    {
+      "heading": """<b>When Might I Need A Guarantor?</b>""",
+      "description":
+          """ <p><span>If your financial reference is weak for any reason, we could ask for a guarantor to
+      support your tenancy. This is a serious commitment, as the guarantor will be as responsible as the tenant
+      for all monies due and obligations agreed for the tenancy. Guarantors need to have strong financial
+      references to show that they will not suffer hardship should they be called upon to pay on your
+      behalf.</span></p>""",
+    },
+    {
+      "heading": """<b>Who Pays The Council Tax And Other Bills?</b>""",
+      "description":
+          """<p><span>Unless otherwise agreed in writing with the landlord, tenants are responsible for
+      payment of all bills. All utility accounts at the property will have been closed in the Landlord's name.
+      In all fully managed properties we will let the relevant council tax department and Thames Water know that
+      you are moving in and you will be responsible for opening an account in your name. Smart Link Estates will
+      not be held responsible for failure of these accounts being set up. Tenants are therefore also advised to
+      notify the relevant companies of their details. Tenants are responsible for transfer of gas and electric
+      bills into their name.</span></p>""",
+    },
+  ];
+
+
+//! 
 
   // static const ourServices = [
   //   {
