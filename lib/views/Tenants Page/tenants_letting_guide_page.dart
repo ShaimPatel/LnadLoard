@@ -67,6 +67,7 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
             : null,
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
+          controller: scrollController,
           physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,

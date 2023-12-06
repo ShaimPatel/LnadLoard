@@ -71,7 +71,7 @@ class AppData {
     }
   ];
 
-//! landlordFaq 
+//! landlordFaq
   static const List<Map<String, String>> landlordFaq = [
     {
       "heading":
@@ -874,8 +874,321 @@ class AppData {
     },
   ];
 
+//! Right to Rent
 
-//! 
+  static const rightToRent = [
+    {
+      "heading": "<b>What does Right to Rent mean for me?</b>",
+      "description":
+          """ <p>Right to Rent was introduced under the Immigration Act 2014 and it is really
+      important for both tenants and landlords to understand the implications of this act.</p>
+      <P>It places restrictions on illegal immigrants accessing rented accommodation in
+      England by making all adult occupants prove they are in the UK legally before being granted a tenancy. This
+      is done through a process called a Right to Rent check.</p>""",
+    },
+    {
+      "heading": "<b>What is a Right to Rent check?</b>",
+      "description":
+          """ <p class="c10"><span class="c3">This is when a prospective adult occupant of a rental property shows their identity
+      documents in person to a landlord or letting agent. This is a similar checking process to presenting your
+      passport (and visa) to a border control officer at an immigration check point.</span></p>
+ <p class="c5"><span class="c3"></span></p>
+ <p class="c10"><span class="c3">The landlord/letting agent must take a copy of the documents seen, and record the
+      check being completed. If a tenant has a time limited right to rent (e.g. a visa or Biometric Residency
+      Permit with an expiry date) then the check must be done within 28 days of the tenancy start date and the
+      visa must be valid for the proposed tenancy start date.</span></p>""",
+    },
+    {
+      "heading": "<b>What are the landlord's/agent's responsibilities?</b>",
+      "description": """ <h6>The landlord/agent must:</h6>
+      <p class="c5"><span class="c3"></span></p>
+      <p class="c10"><span class="c3">Check all adult tenants who will live in the property as their only or main
+              home</span></p>
+      <p class="c10"><span class="c3">Ask tenants for the original documents that show they have the right to be in the
+              UK</span></p>
+      <p class="c10"><span class="c3">Check the original documents with the tenant physically present and ensure they are
+              valid</span></p>
+      <p class="c10"><span class="c3">Make copies of the original documents and record when the check was completed</span>
+      </p>
+      <p class="c10"><span class="c3">Conduct follow up checks at the appropriate time (e.g. repeat the check when a
+              tenant&#39;s visa expires)</span></p>
+      <p class="c10"><span class="c3">If follow up checks reveal that an occupant in a rental property no longer has a
+              valid 'Right to Rent' then the landlord/lettings agent must report that person to the Home
+              Office.</span></p>
+      <p class="c5"><span class="c3"></span></p>
+      <p class="c10"><span class="c3">What documents are acceptable?</span></p>
+      <p class="c10"><span class="c3">Acceptable documents that a tenant can use to demonstrate their identity and Right
+              to Rent are dependent on their nationality.</span></p><h6>Options for British citizens are:<h6>
+              <p class="c5"><span class="c3"></span></p>
+              <p class="c10"><span class="c3">combination of valid UK driving licence & original UK birth certificate</span>
+              </p>
+              <p class="c10"><span class="c3">valid passport</span></p>
+              <h6>Options for all other nationalities are:</h6>
+              <p class="c5"><span class="c3"></span></p>
+              <p class="c10"><span class="c3">valid EEA*/Swiss national ID card (after 30th June 2021 a visa or proof of
+                      settlement status granted may be required)</span></p>
+              <p class="c10"><span class="c3">combination of passport and valid visa or Biometric Residence Permit (BRP)</span>
+              </p>
+              <p class="c10"><span class="c3">*Countries in the EEA are: Austria, Belgium, Bulgaria, Croatia, Republic of Cyprus,
+                      Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy,
+                      Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania,
+                      Slovakia, Slovenia, Spain & Sweden</span></p>""",
+    },
+    {
+      "heading":
+          "<b>If I don't have any documents what are the consequences?</b>",
+      "description":
+          """  <p class="c10"><span class="c3">Occupation of a rental property is conditional on all adult occupants demonstrating
+      a valid Right to Rent prior to the tenancy start date. This can be done at any branch of Smart Link Estates.
+      If any adult occupant fails to present themselves and their original documents proving a valid Right to Rent
+      then all occupants may be denied access to the rental property until this requirement is satisfied.</span>
+     </p>""",
+    },
+    {
+      "heading": "<b>Want to know more?</b>",
+      "description":
+          """    <p class="c10"><span class="c3">Right to Rent checks have been introduced as part of wider Government reforms to the
+      immigration system. For more information visit the Home Office website or contact
+      <a href='mailto:info@smartlinkestates.com'>	 info@smartlinkestates.com</a></span></p>""",
+    }
+  ];
+
+//! Valuation
+  static const valuationData = [
+    {
+      "heading": "<b> What is my house worth? </b>",
+      "description":
+          """ <p> Smart Link Estates will use their intimate knowledge of the local market to identify how much your property is worth. The agent will consider a property's condition, location, layout and size to determine a price, as well as any unique features. These property valuations are a free service and provide you with the information you need to kick start your property selling or renting journey.</p>"""
+    },
+    // {
+    //   heading: "What type of property valuation should I choose?",
+    //   description: """    <p class="c10"><span class="c3">Deciding on which type of property valuation you need depends on what you are
+    //   planning to do. If you are planning to sell or let your property, then you&#39;ll require our &nbsp;free
+    //   home valuation service; an accurate, in-person valuation with a local expert who knows the market
+    //   intimately. This will provide you with all the information you&#39;ll need to kick start your home selling
+    //   journey.</span></p> <p class="c10"><span class="c3">If you are simply curious about finding out the value of your home, you may prefer
+    //   to use an online house valuation calculator. However, these tools aren't very accurate, so will only
+    //   ever provide a rough estimate of your property's value.</span></p>""",
+    // },
+    {
+      "heading": "<b>Why do I need a property valuation?</b>",
+      "description":
+          """<p class="c10"><span class="c3">Completing a house valuation is important for a number of reasons. Receiving a
+      professional opinion on the value of your property will give you the information you need to price your
+      property appropriately when you enter the market, whether you are selling or letting. Should you plan to
+      purchase another property, and require a mortgage, the estimate price of your property will considerably
+      influence the amount you can borrow. In addition to these, property value is also taken into consideration
+      when calculating property taxes.</span></p>""",
+    },
+  ];
+
+//! Feq Question
+  static const faq = [
+    {
+      "heading": "<b> How do you work out the value of my house?      ",
+      "description":
+          """ <p>Our expert agents take a variety of factors into account when valuing a property, including: size, location, condition, performance of comparable properties in your local area and any unique features that make the property more attractive to buyers.</p>""",
+    },
+    {
+      "heading": "<b>What should I do to prepare for a valuation?</b>",
+      "description":
+          """<p>Whilst there isn&#39;t anything specific you need to prepare before a valuation, you
+      may want to make sure your property is clean and tidy to make the best impression possible. Don&#39;t feel
+      shy about showing off all the great features of your home too.</p>""",
+    },
+    {
+      "heading": "<b>Can I get a free valuation on my house?</b>",
+      "description":
+          """<p>Yes, our property valuations are completely free.</p>""",
+    },
+    {
+      "heading":
+          "<b>Am I tied in to using your service after the valuation?</b>",
+      "description":
+          """<p>No. Our free house valuations are “no strings attached” - you are not obliged to instruct us as your agent after the valuation.</p>""",
+    },
+    {
+      "heading": "<b>What if I don't agree with the value you give me?</b>",
+      "description":
+          """<p>Our expert valuers are here to guide you on the value of your property. What you choose to sell your home for is ultimately your decision. However, if a property is majorly overpriced, it is very unlikely to sell.</p>""",
+    },
+  ];
+
+//! moving In
+  static const movingIn = [
+    {
+      "heading": "<b> What references do I need to get?</b>",
+      "description":
+          """ <p class="c7"><span class="c12 c13">For a long let you will be asked for a previous landlord, bank, employee and/or
+      character references to demonstrate proof of income and suitability. You will also need to provide proof of
+      ID, proof of address and proof of a &#39;Right to Rent&#39; in England through a passport or combination of
+      passport and valid visa.</span></p>
+ <p class="c7"><span class="c12 c13">For a short let you will be required to produce proof of address and either your
+      passport, national ID card or driving licence and an employment or character reference detailing why a short
+      let is required.</span></p>
+ <p class="c7"><span class="c12 c13">For a short let tenancy where a company is the tenant you will be required to
+      produce proof of ID for those staying at the property and a letter from the company confirming the full
+      names of all proposed occupants.</span></p>""",
+    },
+    {
+      "heading":
+          "<b>Who is responsible for contacting the utility companies after I move in?</b>",
+      "description":
+          """<p>You as the tenant are responsible for setting up accounts with the utility
+      companies directly when you move into your property and also when you leave, taking care to provide meter
+      readings at the beginning and end of the tenancy.</p>""",
+    },
+  ];
+
+//! Paying Rent
+
+  static const payingRent = [
+    {
+      "heading": "<b>How do I work out a monthly rental payment?</b>",
+      "description":
+          """ <p>The best way to work out the monthly rental payment for a property is to multiply the weekly rent by 52 and divide the total by 12.</p>""",
+    },
+    {
+      "heading": "<b>How do I pay rent?</b>",
+      "description":
+          """<p>For long lets you will be asked to set up a monthly standing order with your bank.</P><P>
+    For short lets you will need to pay the rent in full prior to the commencement of your tenancy. We accept bank transfers, bankers' drafts, and credit cards.
+    </p>""",
+    },
+    {
+      "heading": "<b>When will the rent leave my account?</b>",
+      "description":
+          """<p>Generally rent is paid by a standing order mandate and will leave your account 3 days prior to the rental due date in order to be in the recipients account on the due date (The due date is typically, although not always, the date on which you moved in).</p>""",
+    },
+    {
+      "heading": "<b>What happens if my rent is paid late?</b>",
+      "description":
+          """<p>Any problems with rental payments, that may result in late payment, should be conveyed to Smart Link Estates. Arrears letters will be issued if rent remains outstanding beyond 2 days after it was due. A default fee of interest on late rent is payable at 3% above Bank of England base rate applicable if rent is more than 14 days overdue.</p>""",
+    },
+    {
+      "heading": "<b>How do I serve notice to vacate my property?</b>",
+      "description":
+          """ <p >Notice would need to be served in accordance with your particular lease agreement by recorded delivery to Smart Link Estates by emailing <a  style="color: #026592; text_decoration: underline"  href="mailto:info@smartlinkestates.com">info@smartlinkestates.com</a></p>""",
+    },
+    {
+      "heading":
+          "<b>What penalties will I incur should I break my lease agreement early?</b>",
+      "description":
+          """<p>The primary liability is for rent until the end of the contract or its break clause point.</P><P>
+    If the landlord agrees to re-market the property and once a new tenant is found, then your liability will be reduced to covering the landlord's commission and any other expenses from when the property is re-let. Payments would be calculated on a pro-rata basis for the unexpired term of the contract.
+    </p>""",
+    },
+    {
+      "heading": "<b>How do I renew my contract?</b>",
+      "description":
+          """<p>You should inform us two months prior to the end of your tenancy to allow enough time to arrange all the related administration. Contact <a href='mailto:info@smartlinkestates.com'>	 info@smartlinkestates.com</a> for more information.</p>""",
+    },
+  ];
+
+//! Moving Out
+  static const movingOut = [
+    {
+      "heading":
+          "<b>How do I manage the end of tenancy process with my landlord/Property Manager?</b>",
+      "description":
+          """<p class="c7"><span class="c12 c13">To make moving out of your property as simple as possible, please log
+    onto</span><span class="c3">&nbsp;Smart Link Estates</span><span class="c12 c13">&nbsp;which will guide you
+    through the entire move out process including</span></p>
+  <ul class="c0 lst-kix_list_4-1 start">
+  <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Access to your inventory check-in report and check-out
+          report, once completed</span></li>
+  <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">If relevant, view and respond to proposed deposit
+          deductions</span></li>
+  <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Updates on the return of your deposit</span></li>
+  </ul>""",
+    },
+    {
+      "heading":
+          "<b>Is there a check list of things to do when I am moving    out?</b>",
+      "description": """<ol class="c0 lst-kix_list_5-1 start">
+    <li class="c10 c15"><span class="c12 c13">Read through your inventory check-in report and refresh your memory
+            about the condition of the property when you first moved in</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Return all items of furniture to the original room if
+            they have been moved around &ndash; the inventory check-in report will help if you can't
+            remember</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">All areas of the property need to be cleaned to the
+            same standard they were in when you first moved in Check lights bulbs are in full working order</span>
+    </li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Any outdoor space you are responsible for, like a
+            garden or terrace, needs to look like it did when you moved in</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Remove any unwanted items before you leave the
+            property, as you might be charged the cost of disposal</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">If you have been hanging pictures or TVs on the walls,
+            affixing brackets or inadvertently creating holes, then you are responsible for returning the walls back
+            to their original condition</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Mould in the bathrooms is usually due to condensation.
+            There are lots of mould cleaning products available for a DIY clean up!</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">All sets of keys need to be returned to your landlord
+            or estate agent&#39;s office, including any security passes or security fobs</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Take a photo of the meters on the last day of your
+            tenancy. Contact the utility companies to give them your final readings and pay any balance owing</span>
+    </li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Close your council tax account and pay any balance
+            owing</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Notify TV Licensing about your change of address</span>
+    </li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Re-direct your post with Royal Mail</span></li>
+    <li class="c10 c9 c20 li-bullet-0"><span class="c12 c13">Chat to your landlord before moving out if you think
+            there might be any issues &ndash; it can be much easier to reach a compromise in advance!</span></li>
+ </ol>""",
+    },
+    {
+      "heading": "<b>Where should I return the keys?</b>",
+      "description":
+          """<p>Please return your keys to your Smart Link Estates office on the last day of your tenancy. If you are going to be present at the check-out inspection please hand them to the check-out clerk who will return them to Smart Link Estates.</p>""",
+    },
+    {
+      "heading": "<b>When should I cancel my standing order for rent?</b>",
+      "description":
+          """<p>Please contact your bank to cancel your standing order once your last instalment of rent has been paid in full. Smart Link Estates are unable to cancel a standing order instruction so you must do this directly with your bank</p>""",
+    },
+    {
+      "heading": "<b>When should I close my utility accounts?</b>",
+      "description":
+          """<p>Please contact your utility providers as part of the moving out process. Don’t forget to take meter readings on the last day of your tenancy</p>""",
+    },
+    {
+      "heading": "<b>Can I leave unwanted furniture in the property?</b>",
+      "description":
+          """<p>No. Please leave the property as noted in the inventory check in. If you leave unwanted personal items in the property you may be charged for the cost of removal</p>"""
+    }
+  ];
+
+//! deposit
+  static const deposit = [
+    {
+      "heading": "<b>How much is my deposit?<b>",
+      "description":
+          """<p>Please check the latest deposit certificate which you can find in documents on Smart Link Estates which will confirm the amount of the deposit.</p>""",
+    },
+    {
+      "heading":
+          "<b>Is my deposit protected and can I have a copy of the certificate?<b>",
+      "description":
+          """<p>If your tenancy falls under the deposit protection rules you can find the latest deposit certificate in documents on Smart Link Estates which will also confirm the amount of the deposit.      </p>""",
+    },
+    {
+      "heading": "<b>When will I get my deposit back?<b>",
+      "description":
+          """<p>Your landlord has up to 10 days from your vacate date to propose deductions from your deposit. Once agreed your deposit will be sent back to you by bank transfer and this can take up to 3-5 working days to clear into your account. If there is a disagreement then that portion of the deposit will be retained pending a resolution</p>""",
+    },
+    {
+      "heading": "<b>How will I get my deposit back?<b>",
+      "description":
+          """<p>The deposit will be returned to the lead tenant via bank transfer</p>""",
+    },
+    {
+      "heading":
+          "<b>What happens if I don’t agree with my Landlords proposed deductions?<b>",
+      "description":
+          """<p>Please go to Smart Link Estates for guidance on the next steps, in the event you and your landlord cannot reach a compromise on proposed deductions</p>""",
+    }
+  ];
 
   // static const ourServices = [
   //   {

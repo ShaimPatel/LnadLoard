@@ -64,6 +64,7 @@ class _LandLoardPageState extends State<LandLoardPage> {
               )
             : null,
         body: SingleChildScrollView(
+          controller: scrollController,
           scrollDirection: Axis.vertical,
           physics: const BouncingScrollPhysics(),
           child: Column(
