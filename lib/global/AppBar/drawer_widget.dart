@@ -166,8 +166,8 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (contex) => LandLoardPage()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (contex) => const LandLoardPage()));
             },
           ),
           CustomeDividerWidget(
