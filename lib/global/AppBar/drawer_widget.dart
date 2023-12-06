@@ -12,6 +12,7 @@ import 'package:landloard/views/Properties%20Page/sales_page.dart';
 import 'package:landloard/views/Service%20Page/service_page.dart';
 import 'package:landloard/views/Tenants%20Page/right_to_rent_page.dart';
 import 'package:landloard/views/Tenants%20Page/tenants_letting_guide_page.dart';
+import 'package:landloard/views/Tools%20Page/tools_page.dart';
 
 import '../../views/Properties Page/lettings_page.dart';
 
@@ -149,7 +150,8 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (contex) => const ToolsPage()));
             },
           ),
           CustomeDividerWidget(

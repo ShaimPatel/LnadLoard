@@ -154,22 +154,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ],
                             ),
-                            Expanded(
+                            const Expanded(
                               child: TabBarView(
                                 children: [
                                   // Content for Tab A1
-                                  const SalesWidget(),
+                                  SalesWidget(),
                                   // Content for Tab A2
-                                  Container(
-                                    decoration: BoxDecoration(
-                                        color: Colors.grey[300],
-                                        borderRadius: const BorderRadius.only(
-                                            bottomLeft: Radius.circular(20),
-                                            bottomRight: Radius.circular(20))),
-                                    child: const Center(
-                                      child: Text('Connect for rent'),
-                                    ),
-                                  ),
+                                  SalesWidget(),
                                 ],
                               ),
                             ),
