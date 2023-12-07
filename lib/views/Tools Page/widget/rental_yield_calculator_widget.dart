@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:landloard/res/colors/app_color.dart';
 
 import '../../HomePage/widgets/featured_properties_widget.dart';
+import 'calculator_widget.dart';
 
 class RentalYieldCalculatorWidget extends StatefulWidget {
   ScrollController? controller;
@@ -20,6 +21,9 @@ class RentalYieldCalculatorWidget extends StatefulWidget {
 
 class _RentalYieldCalculatorWidgetState
     extends State<RentalYieldCalculatorWidget> {
+  TextEditingController purchesController = TextEditingController();
+  TextEditingController monthlyRentController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,7 +34,6 @@ class _RentalYieldCalculatorWidgetState
         scrollDirection: Axis.vertical,
         controller: widget.controller,
         physics: const BouncingScrollPhysics(),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -64,9 +67,76 @@ class _RentalYieldCalculatorWidgetState
             ),
             const SizedBox(height: 20),
             Container(
-              height: 300,
+              height: MediaQuery.of(context).size.height * 0.5,
               width: double.maxFinite,
-              color: Colors.purple,
+              decoration: BoxDecoration(
+                  color: AppColor.greenColor,
+                  borderRadius: BorderRadius.circular(5)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 10,
+                    width: double.maxFinite,
+                    decoration: const BoxDecoration(
+                        color: AppColor.yellowColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          topRight: Radius.circular(5),
+                        )),
+                  ),
+                  const SizedBox(height: 25),
+                  //!
+                  CalculatorWidget(
+                    controller: purchesController,
+                    title: " Purchase Price",
+                    hintText: " £ e.g. 500,000",
+                  ),
+                  CalculatorWidget(
+                    controller: monthlyRentController,
+                    title: " Monthly Rent",
+                    hintText: " £ e.g. 750,000",
+                  ),
+
+                  //!
+                  Padding(
+                    padding: const EdgeInsets.only(left: 25.0, top: 25),
+                    child: Container(
+                      width: 150,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(3),
+                        color: AppColor.yellowColor,
+                      ),
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          foregroundColor: Colors.white,
+                          textStyle: const TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600),
+                        ),
+                        onPressed: () {},
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            const Icon(
+                              Icons.calculate,
+                              size: 20,
+                              color: AppColor.blackColor,
+                            ),
+                            Text(
+                              "Calculate".toUpperCase(),
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                  color: AppColor.blackColor),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             const FeaturedPropertiesWidget(),
           ],

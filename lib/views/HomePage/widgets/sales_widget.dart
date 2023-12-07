@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/res/components/Constrians.dart';
+import 'package:landloard/res/utils/utils.dart';
+import 'package:landloard/views/ContactUs%20Page/contact_us_page.dart';
+import 'package:landloard/views/Properties%20Page/sales_page.dart';
 
 class SalesWidget extends StatelessWidget {
   const SalesWidget({super.key});
@@ -36,19 +39,31 @@ class SalesWidget extends StatelessWidget {
                             true,
                           ),
                         ),
-                        Container(
-                          height: 55,
-                          width: 70,
-                          decoration: BoxDecoration(
-                              color: AppColor.greenColor,
-                              border: Border.all(color: Colors.grey),
-                              borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(10),
-                                  bottomRight: Radius.circular(10))),
-                          child: const Icon(
-                            Icons.search,
-                            size: 40,
-                            color: AppColor.yellowColor,
+                        InkWell(
+                          onTap: () {
+                            if (searchController.text.isNotEmpty) {
+                              Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                      builder: (contex) => const SalesPage()));
+                            } else {
+                              Utils.toastMessage(
+                                  "Please enter what you want to search for");
+                            }
+                          },
+                          child: Container(
+                            height: 55,
+                            width: 70,
+                            decoration: BoxDecoration(
+                                color: AppColor.greenColor,
+                                border: Border.all(color: Colors.grey),
+                                borderRadius: const BorderRadius.only(
+                                    topRight: Radius.circular(10),
+                                    bottomRight: Radius.circular(10))),
+                            child: const Icon(
+                              Icons.search,
+                              size: 40,
+                              color: AppColor.yellowColor,
+                            ),
                           ),
                         )
                       ],
@@ -99,7 +114,9 @@ class SalesWidget extends StatelessWidget {
                       Center(
                         child: elevatedBorderButton(
                           "enquire with us".toUpperCase(),
-                          () => null,
+                          () => Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                  builder: (contex) => const ContactUsPage())),
                           200.0,
                           14,
                           AppColor.yellowColor,

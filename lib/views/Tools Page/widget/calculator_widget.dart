@@ -1,0 +1,55 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/material.dart';
+
+import 'package:landloard/res/colors/app_color.dart';
+
+class CalculatorWidget extends StatefulWidget {
+  TextEditingController controller;
+  String title, hintText;
+
+  CalculatorWidget({
+    Key? key,
+    required this.controller,
+    required this.title,
+    required this.hintText,
+  }) : super(key: key);
+
+  @override
+  State<CalculatorWidget> createState() => _CalculatorWidgetState();
+}
+
+class _CalculatorWidgetState extends State<CalculatorWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            widget.title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+              color: AppColor.whiteColor,
+            ),
+          ),
+          const SizedBox(height: 10),
+          TextField(
+            controller: widget.controller,
+            decoration: InputDecoration(
+              hintText: widget.hintText,
+              border: const OutlineInputBorder(),
+              fillColor: AppColor.whiteColor,
+              filled: true,
+            ),
+            onChanged: (text) {
+              print('Entered text: $text');
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}

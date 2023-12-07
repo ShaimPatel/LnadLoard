@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: double.maxFinite,
-                    color: Colors.red,
+                    color: AppColor.whiteColor,
                     child: CarouselSlider(
                       items: sliderImage.map((logo) {
                         return Builder(

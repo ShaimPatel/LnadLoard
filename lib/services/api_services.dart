@@ -6,8 +6,8 @@ import 'package:http_parser/http_parser.dart';
 import 'package:landloard/services/app_exception.dart';
 
 class ApiService {
-  static const String _baseUrl = "https://bu-backend.wifiten.cloud";
-
+  static const String _baseUrl = "https://api.smartlinkestates.com/api";
+// https://api.smartlinkestates.com/api
   //! GetUrl Method..
   static Uri getUrl(String methodName) {
     return Uri.parse(_baseUrl + methodName);
@@ -21,7 +21,7 @@ class ApiService {
       print(getUrl(url));
     }
     try {
-      var response;
+      http.Response response;
       if (headerMap == null) {
         response = await http.get(getUrl(url));
       } else {
@@ -147,9 +147,8 @@ class ApiService {
         throw BadRequestException(responseJson['message']);
 
       default:
-        throw FetchDataException(
-            'Error occured while communication with server' +
-                ' with status code : ${response.statusCode}');
+        throw FetchDataException('Error occured while communication with server'
+            ' with status code : ${response.statusCode}');
     }
   }
 }

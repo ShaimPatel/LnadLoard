@@ -45,6 +45,7 @@ class _ToolsPageState extends State<ToolsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
         title: const Image(
           image: AssetImage(
@@ -63,14 +64,14 @@ class _ToolsPageState extends State<ToolsPage> {
           : null,
       body: Column(
         children: [
-          const SizedBox(height: 50),
+          const SizedBox(height: 20),
           Expanded(
             child: Container(
               // height: MediaQuery.of(context).size.height * 0.8,
               width: double.maxFinite,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(25),
+                color: AppColor.whiteColor,
+                borderRadius: BorderRadius.circular(5),
               ),
               child: DefaultTabController(
                 length: 3, // Number of tab sets
