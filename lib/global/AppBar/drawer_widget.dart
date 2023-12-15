@@ -47,7 +47,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
+              Navigator.of(context).push(
                   MaterialPageRoute(builder: (contex) => const HomePage()));
             },
           ),
@@ -82,28 +82,28 @@ class CustomDrawerWidget extends StatelessWidget {
                     ListTile(
                       title: const Text('Sales'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) => const SalesPage()));
                       },
                     ),
                     ListTile(
                       title: const Text('Lettings'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) => const LattingsPage()));
                       },
                     ),
                     ListTile(
                       title: const Text('Commercial'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) => const CommercialPage()));
                       },
                     ),
                     ListTile(
                       title: const Text('International'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) => const InternationalPage()));
                       },
                     ),
@@ -130,7 +130,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
+              Navigator.of(context).push(
                   MaterialPageRoute(builder: (contex) => const ServicePage()));
             },
           ),
@@ -150,7 +150,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
+              Navigator.of(context).push(
                   MaterialPageRoute(builder: (contex) => const ToolsPage()));
             },
           ),
@@ -170,7 +170,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
+              Navigator.of(context).push(MaterialPageRoute(
                   builder: (contex) => const LandLoardPage()));
             },
           ),
@@ -203,7 +203,7 @@ class CustomDrawerWidget extends StatelessWidget {
                     ListTile(
                       title: const Text('Tenants Letting Guide'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) =>
                                 const TenantsLettingGuidePage()));
                       },
@@ -211,7 +211,7 @@ class CustomDrawerWidget extends StatelessWidget {
                     ListTile(
                       title: const Text('Right to Rent'),
                       onTap: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (contex) => const RightToRentPage()));
                       },
                     ),
@@ -237,7 +237,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(
+              Navigator.of(context).push(
                   MaterialPageRoute(builder: (contex) => const AboutUsPage()));
             },
           ),
@@ -257,7 +257,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
+              Navigator.of(context).push(MaterialPageRoute(
                   builder: (contex) => const ContactUsPage()));
             },
           ),

@@ -3,9 +3,23 @@ import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/res/components/Constrians.dart';
+import 'package:super_banners/super_banners.dart';
 
-class FeaturedPropertiesWidget extends StatelessWidget {
+import '../../Properties Page/all_properties_page.dart';
+
+class FeaturedPropertiesWidget extends StatefulWidget {
   const FeaturedPropertiesWidget({super.key});
+
+  @override
+  State<FeaturedPropertiesWidget> createState() =>
+      _FeaturedPropertiesWidgetState();
+}
+
+class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +70,7 @@ class FeaturedPropertiesWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Stack(
-                          fit: StackFit.loose,
+                          // fit: StackFit.expand,
                           children: [
                             Container(
                               height: 180,
@@ -76,32 +90,39 @@ class FeaturedPropertiesWidget extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Positioned(
-                                left: 0, // Adjust the left position as needed
-                                top: 0, // Adjust the top position as needed
-                                child: Transform.rotate(
-                                  angle:
-                                      -0.75, // Adjust the rotation angle as needed
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(bottom: 40),
-                                    child: Container(
-                                      decoration: const BoxDecoration(
-                                        color: Colors.red,
-                                      ),
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 15, vertical: 10),
-                                      child: const Center(
-                                        child: Text(
-                                          'For Sale',
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                )),
+                            const Positioned(
+                              left: 0, // Adjust the left position as needed
+                              top: 0, // Adjust the top position as needed
+                              // child: Transform.rotate(
+                              //   angle:
+                              //       -0.75, // Adjust the rotation angle as needed
+                              //   child: Padding(
+                              //     padding: const EdgeInsets.only(bottom: 40),
+                              //     child: Container(
+                              //       decoration: const BoxDecoration(
+                              //         color: Colors.red,
+                              //       ),
+                              //       padding: const EdgeInsets.symmetric(
+                              //           horizontal: 15, vertical: 10),
+                              //       child: const Center(
+                              //         child: Text(
+                              //           'For Sale',
+                              //           style: TextStyle(
+                              //             color: Colors.white,
+                              //             fontWeight: FontWeight.bold,
+                              //           ),
+                              //         ),
+                              //       ),
+                              //     ),
+                              //   ),
+                              // ),
+                              child: CornerBanner(
+                                bannerPosition: CornerBannerPosition.topLeft,
+                                bannerColor: Colors.red,
+                                elevation: 10,
+                                child: Text("For Sale"),
+                              ),
+                            ),
 
                             //! Icons
                             Positioned(
@@ -247,7 +268,8 @@ class FeaturedPropertiesWidget extends StatelessWidget {
           const SizedBox(height: 30),
           Elevated_Button(
             "View all properties",
-            () => null,
+            () => Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (_) => const AllPropertiesPage())),
             150.0,
             15,
             AppColor.whiteColor,

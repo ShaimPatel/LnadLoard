@@ -7,7 +7,6 @@ import 'package:landloard/services/app_exception.dart';
 
 class ApiService {
   static const String _baseUrl = "https://api.smartlinkestates.com/api";
-// https://api.smartlinkestates.com/api
   //! GetUrl Method..
   static Uri getUrl(String methodName) {
     return Uri.parse(_baseUrl + methodName);
