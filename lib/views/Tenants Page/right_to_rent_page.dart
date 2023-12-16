@@ -17,7 +17,8 @@ class RightToRentPage extends StatefulWidget {
 
 class _RightToRentPageState extends State<RightToRentPage> {
   bool _isVisible = false;
-  bool? is_Expanded = false;
+  final bool _isExpanded = false;
+
   final ScrollController scrollController = ScrollController();
 
   @override
@@ -44,10 +45,17 @@ class _RightToRentPageState extends State<RightToRentPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Image(
           image: AssetImage(
             ImageAssets.smartlink,
@@ -89,7 +97,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -228,7 +236,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -323,7 +331,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -427,7 +435,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -519,7 +527,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -613,7 +621,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 2,
@@ -706,7 +714,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
               child: ExpansionPanelList.radio(
                 expansionCallback: (int index, bool isExpanded) {
                   setState(() {
-                    is_Expanded = !isExpanded;
+                    isExpanded = !isExpanded;
                   });
                 },
                 elevation: 1,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../res/colors/app_color.dart';
-import '../../../res/components/Constrians.dart';
+import '../../../res/components/constrians.dart';
 
 class EnquireWidgets extends StatelessWidget {
   const EnquireWidgets({super.key});

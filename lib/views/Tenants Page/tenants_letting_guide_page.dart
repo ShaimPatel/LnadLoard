@@ -47,9 +47,16 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Image(
             image: AssetImage(
               ImageAssets.smartlink,

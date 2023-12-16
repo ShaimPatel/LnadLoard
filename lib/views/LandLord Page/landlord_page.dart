@@ -45,9 +45,16 @@ class _LandLoardPageState extends State<LandLoardPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Image(
             image: AssetImage(
               ImageAssets.smartlink,

@@ -91,6 +91,7 @@ class _StampDutyCalculatorWidgetState extends State<StampDutyCalculatorWidget> {
                       Checkbox(
                         activeColor: AppColor.yellowColor,
                         value: isChecked,
+
                         // fillColor: Colors.red,
                         onChanged: (bool? value) {
                           setState(() {
@@ -111,6 +112,8 @@ class _StampDutyCalculatorWidgetState extends State<StampDutyCalculatorWidget> {
                       ),
                       const Text(
                         "Property is a buy-to-let or second home",
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 18.0,
                           fontWeight: FontWeight.w300,

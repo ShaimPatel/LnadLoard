@@ -43,10 +43,17 @@ class _ToolsPageState extends State<ToolsPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Image(
           image: AssetImage(
             ImageAssets.smartlink,

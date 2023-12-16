@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_gif/flutter_gif.dart';
 import 'package:landloard/res/assets/image_assets.dart';
-import 'package:landloard/res/components/Constrians.dart';
+import 'package:landloard/res/components/constrians.dart';
 import 'package:landloard/views/HomePage/home_page.dart';
 
 class SplashPage extends StatefulWidget {

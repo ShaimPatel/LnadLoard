@@ -55,9 +55,16 @@ class _ServicePageState extends State<ServicePage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Image(
           image: AssetImage(
             ImageAssets.smartlink,

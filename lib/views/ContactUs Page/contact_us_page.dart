@@ -8,7 +8,7 @@ import 'package:landloard/global/AppBar/drawer_widget.dart';
 import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
-import 'package:landloard/res/components/Constrians.dart';
+import 'package:landloard/res/components/constrians.dart';
 
 class ContactUsPage extends StatefulWidget {
   const ContactUsPage({super.key});
@@ -82,10 +82,18 @@ class _ContactUsPageState extends State<ContactUsPage> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        scrolledUnderElevation: 10.0,
         title: const Image(
           image: AssetImage(
             ImageAssets.smartlink,
@@ -187,7 +195,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: TextField_Design(
+              child: textFieldDesign(
                 nameController.text,
                 "Your Name",
                 nameController,
@@ -196,7 +204,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: TextField_Design(
+              child: textFieldDesign(
                 emailController.text,
                 "Your Email",
                 emailController,
@@ -205,7 +213,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: TextField_Design(
+              child: textFieldDesign(
                 subjectController.text,
                 "Subject",
                 subjectController,
@@ -214,7 +222,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: TextField_Design(
+              child: textFieldDesign(
                 messageController.text,
                 "Message",
                 messageController,
@@ -223,7 +231,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             ),
             const SizedBox(height: 25),
             Center(
-              child: Elevated_Button(
+              child: elevatedButton(
                 "SEND MESSAGE",
                 () => null,
                 200.0,

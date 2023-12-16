@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
-import 'package:landloard/res/components/Constrians.dart';
+import 'package:landloard/res/components/constrians.dart';
 import 'package:super_banners/super_banners.dart';
 
 import '../../Properties Page/all_properties_page.dart';
@@ -54,6 +54,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
             width: double.maxFinite,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
               itemCount: 3,
               itemBuilder: (context, index) {
                 return Padding(
@@ -65,12 +66,10 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                         border: Border.all(
                           color: AppColor.greyColor,
                         )),
-                    // color: Colors.green,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Stack(
-                          // fit: StackFit.expand,
                           children: [
                             Container(
                               height: 180,
@@ -93,34 +92,20 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                             const Positioned(
                               left: 0, // Adjust the left position as needed
                               top: 0, // Adjust the top position as needed
-                              // child: Transform.rotate(
-                              //   angle:
-                              //       -0.75, // Adjust the rotation angle as needed
-                              //   child: Padding(
-                              //     padding: const EdgeInsets.only(bottom: 40),
-                              //     child: Container(
-                              //       decoration: const BoxDecoration(
-                              //         color: Colors.red,
-                              //       ),
-                              //       padding: const EdgeInsets.symmetric(
-                              //           horizontal: 15, vertical: 10),
-                              //       child: const Center(
-                              //         child: Text(
-                              //           'For Sale',
-                              //           style: TextStyle(
-                              //             color: Colors.white,
-                              //             fontWeight: FontWeight.bold,
-                              //           ),
-                              //         ),
-                              //       ),
-                              //     ),
-                              //   ),
-                              // ),
                               child: CornerBanner(
                                 bannerPosition: CornerBannerPosition.topLeft,
                                 bannerColor: Colors.red,
-                                elevation: 10,
-                                child: Text("For Sale"),
+                                elevation: 1,
+                                child: Padding(
+                                  padding: EdgeInsets.all(5.0),
+                                  child: Text(
+                                    "For Sale",
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      color: AppColor.whiteColor,
+                                    ),
+                                  ),
+                                ),
                               ),
                             ),
 
@@ -131,24 +116,28 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                                 child: Row(
                                   children: const [
                                     CircleAvatar(
+                                      maxRadius: 15,
                                       child: Icon(
                                         Icons.facebook,
+                                        size: 30,
                                       ),
                                     ),
                                     SizedBox(width: 5),
                                     CircleAvatar(
-                                      backgroundColor: AppColor.blueColor,
-                                      child: Icon(
-                                        Icons.facebook,
-                                      ),
-                                    ),
+                                        backgroundColor: AppColor.blueColor,
+                                        maxRadius: 15,
+                                        child: Icon(
+                                          Icons.facebook,
+                                          size: 30,
+                                        )),
                                     SizedBox(width: 5),
                                     CircleAvatar(
-                                      backgroundColor: AppColor.blackColor,
-                                      child: Icon(
-                                        Icons.facebook,
-                                      ),
-                                    )
+                                        backgroundColor: AppColor.blackColor,
+                                        maxRadius: 15,
+                                        child: Icon(
+                                          Icons.facebook,
+                                          size: 30,
+                                        ))
                                   ],
                                 ))
                           ],
@@ -184,7 +173,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                                 )
                               ],
                             ),
-                            Elevated_Button(
+                            elevatedButton(
                               "sales".toUpperCase(),
                               () => null,
                               70.0,
@@ -247,7 +236,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                         const SizedBox(height: 20),
                         //!
                         Center(
-                          child: Elevated_Button(
+                          child: elevatedButton(
                             "See details",
                             () => null,
                             130.0,
@@ -266,7 +255,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
             ),
           ),
           const SizedBox(height: 30),
-          Elevated_Button(
+          elevatedButton(
             "View all properties",
             () => Navigator.of(context).pushReplacement(
                 MaterialPageRoute(builder: (_) => const AllPropertiesPage())),

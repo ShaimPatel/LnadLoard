@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../global/Widgets/divider_widget.dart';
 import '../../../res/assets/image_assets.dart';
 import '../../../res/colors/app_color.dart';
-import '../../../res/components/Constrians.dart';
+import '../../../res/components/constrians.dart';
 
 class BarrowWidget extends StatelessWidget {
   const BarrowWidget({super.key});
@@ -76,7 +76,7 @@ class BarrowWidget extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            Elevated_Button(
+            elevatedButton(
               "Calculate Now",
               () => null,
               150.0,

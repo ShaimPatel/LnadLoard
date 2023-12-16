@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../global/Widgets/divider_widget.dart';
 import '../../../res/assets/image_assets.dart';
 import '../../../res/colors/app_color.dart';
-import '../../../res/components/Constrians.dart';
+import '../../../res/components/constrians.dart';
 
 class LandLordsWidget extends StatelessWidget {
   const LandLordsWidget({super.key});
@@ -57,7 +57,7 @@ class LandLordsWidget extends StatelessWidget {
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
             ),
             const SizedBox(height: 20),
-            Elevated_Button(
+            elevatedButton(
               "See more",
               () => null,
               150.0,

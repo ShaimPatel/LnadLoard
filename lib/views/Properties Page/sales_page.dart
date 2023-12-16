@@ -34,6 +34,12 @@ class _SalesPageState extends State<SalesPage> {
     });
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
+  }
+
   void scrollTo() {
     _scrollController.animateTo(0.0,
         duration: const Duration(milliseconds: 300), curve: Curves.bounceInOut);
@@ -43,6 +49,7 @@ class _SalesPageState extends State<SalesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Image(
             image: AssetImage(
               ImageAssets.smartlink,

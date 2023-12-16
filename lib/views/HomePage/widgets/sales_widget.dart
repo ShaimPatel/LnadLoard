@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landloard/res/colors/app_color.dart';
-import 'package:landloard/res/components/Constrians.dart';
+import 'package:landloard/res/components/constrians.dart';
 import 'package:landloard/res/utils/utils.dart';
 import 'package:landloard/views/ContactUs%20Page/contact_us_page.dart';
 import 'package:landloard/views/Properties%20Page/sales_page.dart';
@@ -32,7 +32,7 @@ class SalesWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Expanded(
-                          child: TextField_Design(
+                          child: textFieldDesign(
                             searchController.text,
                             "Post Code or City. e.g Lo",
                             searchController,
@@ -114,9 +114,8 @@ class SalesWidget extends StatelessWidget {
                       Center(
                         child: elevatedBorderButton(
                           "enquire with us".toUpperCase(),
-                          () => Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                  builder: (contex) => const ContactUsPage())),
+                          () => Navigator.of(context).push(MaterialPageRoute(
+                              builder: (contex) => const ContactUsPage())),
                           200.0,
                           14,
                           AppColor.yellowColor,

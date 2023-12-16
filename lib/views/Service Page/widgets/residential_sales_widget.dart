@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../global/Widgets/divider_widget.dart';
 import '../../../res/colors/app_color.dart';
-import '../../../res/components/Constrians.dart';
 
 class ResidentialSalesWidgets extends StatelessWidget {
   const ResidentialSalesWidgets({super.key});
@@ -131,7 +130,5 @@ class ResidentialSalesWidgets extends StatelessWidget {
         ),
       ),
     );
-
-   
   }
 }

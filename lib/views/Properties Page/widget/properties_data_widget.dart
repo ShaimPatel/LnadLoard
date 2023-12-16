@@ -4,7 +4,7 @@ import 'package:super_banners/super_banners.dart';
 import '../../../global/Widgets/divider_widget.dart';
 import '../../../res/assets/image_assets.dart';
 import '../../../res/colors/app_color.dart';
-import '../../../res/components/Constrians.dart';
+import '../../../res/components/constrians.dart';
 
 class PropertiesDataWidget extends StatefulWidget {
   const PropertiesDataWidget({super.key});
@@ -62,12 +62,19 @@ class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
                             ),
                           ),
                           const Positioned(
-                            left: 0, // Adjust the left position as needed
-                            top: 0, // Adjust the top position as needed
+                            left: 0,
+                            top: 0,
                             child: CornerBanner(
                               bannerPosition: CornerBannerPosition.topLeft,
-                              bannerColor: Colors.blue,
-                              child: Text("Hello, World!"),
+                              bannerColor: Colors.red,
+                              child: Padding(
+                                padding: EdgeInsets.all(5.0),
+                                child: Text(
+                                  "For Sale",
+                                  style: TextStyle(
+                                      fontSize: 18, color: AppColor.whiteColor),
+                                ),
+                              ),
                             ),
                           ),
 
@@ -134,7 +141,7 @@ class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
                                 )
                               ],
                             ),
-                            Elevated_Button(
+                            elevatedButton(
                               "sales".toUpperCase(),
                               () => null,
                               70.0,
@@ -199,7 +206,7 @@ class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
                       //!
                       Padding(
                         padding: const EdgeInsets.only(left: 10.0),
-                        child: Elevated_Button(
+                        child: elevatedButton(
                           "See details",
                           () => null,
                           150.0,
