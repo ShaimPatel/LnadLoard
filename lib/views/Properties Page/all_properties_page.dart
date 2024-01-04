@@ -46,6 +46,7 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
     return Scaffold(
       backgroundColor: AppColor.whiteColor,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: const Image(
           image: AssetImage(
             ImageAssets.smartlink,
@@ -108,6 +109,7 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
                           // Content for Tab A1
                           const PropertiesDataWidget(),
                           // Content for Tab A2
+
                           const PropertiesDataWidget(),
                           // Content for Tab A3
                           StampDutyCalculatorWidget(
@@ -115,8 +117,7 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
                           ),
                           // A4
                           const PropertiesDataWidget(),
-
-//5
+                          //5
                           const PropertiesDataWidget(),
                         ],
                       ),

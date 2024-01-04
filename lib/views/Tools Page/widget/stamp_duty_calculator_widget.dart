@@ -110,14 +110,16 @@ class _StampDutyCalculatorWidgetState extends State<StampDutyCalculatorWidget> {
                         ),
                         checkColor: AppColor.greenColor,
                       ),
-                      const Text(
-                        "Property is a buy-to-let or second home",
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.w300,
-                          color: AppColor.whiteColor,
+                      const Expanded(
+                        child: Text(
+                          "Property is a buy-to-let or second home",
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w300,
+                            color: AppColor.whiteColor,
+                          ),
                         ),
                       ),
                     ],

@@ -111,7 +111,6 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
                     final Map<String, String> panel = entry.value;
-
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
                         return Padding(

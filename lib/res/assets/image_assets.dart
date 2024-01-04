@@ -60,6 +60,10 @@ class ImageAssets {
   static const String xp = 'images/companyLogo/xp.png';
   static const String zoopla = 'images/companyLogo/zoopla.png';
 
+  static const String whatsapp = 'images/whatsapp.png';
+  static const String facebook = 'images/facebook.png';
+  static const String twitter = 'images/twitter.jpg';
+
   static const String technosysinfowareltd =
       'images/companyLogo/technosysinfowareltd.jpg';
   static const String house = 'images/companyLogo/house.jpg';
