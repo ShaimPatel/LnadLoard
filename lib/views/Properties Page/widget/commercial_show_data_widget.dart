@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../../Models/properties_data_model.dart';
 import '../../../Provider/properties_provider.dart';
+import '../../../global/Widgets/shimmer_widget.dart';
 
 class CommercialShowDataWidget extends StatefulWidget {
   const CommercialShowDataWidget({Key? key}) : super(key: key);
@@ -34,7 +35,13 @@ class _CommercialShowDataWidgetState extends State<CommercialShowDataWidget> {
                 case ConnectionState.none:
                   return const Text('No connection state yet');
                 case ConnectionState.waiting:
-                  return const Center(child: CircularProgressIndicator());
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: ShimmerWidget(
+                        widthSized: MediaQuery.of(context).size.width * 0.6,
+                        scrollDirection: Axis.vertical
+                    ),
+                  );
                 case ConnectionState.active:
                 // Not commonly used, but here for demonstration
                   return const Text('Connection is active');

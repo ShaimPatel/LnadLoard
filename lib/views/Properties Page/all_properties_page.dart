@@ -4,6 +4,7 @@ import 'package:landloard/views/Properties%20Page/widget/properties_data_widget.
 import 'package:provider/provider.dart';
 
 import '../../Models/properties_data_model.dart';
+import '../../global/Widgets/shimmer_widget.dart';
 
 class AllPropertiesPage extends StatefulWidget {
   const AllPropertiesPage({Key? key}) : super(key: key);
@@ -35,7 +36,13 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
                   case ConnectionState.none:
                     return const Text('No connection state yet');
                   case ConnectionState.waiting:
-                    return const Center(child: CircularProgressIndicator());
+                    return  Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: ShimmerWidget(
+                        widthSized: MediaQuery.of(context).size.width * 0.6,
+                          scrollDirection: Axis.vertical
+                      ),
+                    );
                   case ConnectionState.active:
                   // Not commonly used, but here for demonstration
                     return const Text('Connection is active');

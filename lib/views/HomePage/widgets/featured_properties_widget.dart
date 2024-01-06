@@ -5,9 +5,11 @@ import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/res/components/constrians.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:super_banners/super_banners.dart';
 
 import '../../../Provider/properties_provider.dart';
+import '../../../global/Widgets/shimmer_widget.dart';
 import '../../Properties Page/properties_page.dart';
 
 class FeaturedPropertiesWidget extends StatefulWidget {
@@ -28,19 +30,9 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
     ImageAssets.img6,
   ];
 
-  Color getColorFromHex(String hexColor) {
-    hexColor = hexColor.replaceAll("#", "");
-    if (hexColor.length == 6) {
-      hexColor = "FF$hexColor"; // Add the alpha value if it's missing
-    }
-    try {
-      int parsedColor = int.parse(hexColor, radix: 16);
-      return Color(parsedColor);
-    } catch (e) {
-      print('Error parsing color: $e');
-      return Colors.transparent; // Return a default color in case of an error
-    }
-  }
+
+
+
 
   @override
   void initState() {
@@ -87,10 +79,9 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                   case ConnectionState.none:
                     return const Text('No connection state yet');
                   case ConnectionState.waiting:
-                    return Container(
-                      width: MediaQuery.of(context).size.width*0.6,
-                      height: MediaQuery.of(context).size.height*0.6,
-                      color: Colors.red.shade300,
+                    return ShimmerWidget(
+                      widthSized: MediaQuery.of(context).size.width*0.6,
+                      scrollDirection: Axis.horizontal,
                     );
                   case ConnectionState.active:
                     return const Text('Connection is active');
@@ -113,7 +104,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                             itemBuilder: (ctx, index) {
                               var showData =
                                   snapshot.data?.data!.results![index];
-                              Color? containerColor = getColorFromHex(snapshot
+                              Color? containerColor =valueFeaturedData.getColorFromHex(snapshot
                                       .data?.data!.results![index].tag!.color ??
                                   "#FFFFFF");
                               return Padding(
@@ -158,10 +149,10 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                                           ),
                                           if (containerColor != null)
                                             Positioned(
-                                              left:
-                                                  0, // Adjust the left position as needed
-                                              top:
-                                                  0, // Adjust the top position as needed
+                                              left: 0,
+                                              // Adjust the left position as needed
+                                              top: 0,
+                                              // Adjust the top position as needed
                                               child: CornerBanner(
                                                 bannerPosition:
                                                     CornerBannerPosition
