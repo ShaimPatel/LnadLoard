@@ -28,4 +28,18 @@ class PropertiesProvider extends ChangeNotifier {
       throw Exception('Failed to load data: $e');
     }
   }
+
+Color getColorFromHex(String hexColor) {
+  hexColor = hexColor.replaceAll("#", "");
+  if (hexColor.length == 6) {
+    hexColor = "FF$hexColor"; // Add the alpha value if it's missing
+  }
+  try {
+    int parsedColor = int.parse(hexColor, radix: 16);
+    return Color(parsedColor);
+  } catch (e) {
+    print('Error parsing color: $e');
+    return Colors.transparent; // Return a default color in case of an error
+  }
+}
 }

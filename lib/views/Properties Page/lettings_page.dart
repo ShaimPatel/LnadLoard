@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landloard/views/Properties%20Page/widget/latting_show_data_widget.dart';
 
 import '../../global/AppBar/drawer_widget.dart';
 import '../../res/assets/image_assets.dart';
@@ -20,22 +21,11 @@ class LattingsPage extends StatelessWidget {
         ),
       ),
       endDrawer: const CustomDrawerWidget(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            CircularProgressIndicator(),
-            SizedBox(height: 50),
-            Text(
-              "Data not found. !",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height*1,
+        width: MediaQuery.of(context).size.width,
+        child: LattingShowDataWidget(),
+      )
     );
   }
 }

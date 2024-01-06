@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:landloard/views/Properties%20Page/widget/properties_data_widget.dart';
+import 'package:landloard/views/Properties%20Page/widget/sales_show_data_widget.dart';
 
 import '../../global/AppBar/drawer_widget.dart';
 import '../../res/assets/image_assets.dart';
+import '../HomePage/widgets/sales_widget.dart';
 
 class SalesPage extends StatefulWidget {
   const SalesPage({super.key});
@@ -65,6 +67,10 @@ class _SalesPageState extends State<SalesPage> {
                 child: const Icon(Icons.arrow_upward),
               )
             : null,
-        body: const PropertiesDataWidget());
+        body: Container(
+          height: MediaQuery.of(context).size.height*1,
+          width: MediaQuery.of(context).size.width,
+          child: SalesShowDataWidget(),
+        ),);
   }
 }

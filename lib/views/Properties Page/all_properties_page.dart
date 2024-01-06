@@ -1,134 +1,90 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+import 'package:landloard/Provider/properties_provider.dart';
 import 'package:landloard/views/Properties%20Page/widget/properties_data_widget.dart';
-import 'package:landloard/views/Tools%20Page/widget/stamp_duty_calculator_widget.dart';
+import 'package:provider/provider.dart';
 
-import '../../global/AppBar/drawer_widget.dart';
-import '../../res/assets/image_assets.dart';
-import '../../res/colors/app_color.dart';
+import '../../Models/properties_data_model.dart';
 
 class AllPropertiesPage extends StatefulWidget {
-  const AllPropertiesPage({super.key});
+  const AllPropertiesPage({Key? key}) : super(key: key);
 
   @override
   State<AllPropertiesPage> createState() => _AllPropertiesPageState();
 }
 
 class _AllPropertiesPageState extends State<AllPropertiesPage> {
-  final ScrollController _scrollController = ScrollController();
-  bool _isVisible = false;
 
   @override
   void initState() {
+    Provider.of<PropertiesProvider>(context , listen: false).fetchFeaturedPropertiesData();
     super.initState();
-    _scrollController.addListener(() {
-      if (_scrollController.position.userScrollDirection ==
-          ScrollDirection.reverse) {
-        setState(() {
-          _isVisible = true;
-        });
-      } else if (_scrollController.position.userScrollDirection ==
-          ScrollDirection.forward) {
-        setState(() {
-          _isVisible = false;
-        });
-      }
-    });
   }
 
-  void scrollTo() {
-    _scrollController.animateTo(0.0,
-        duration: const Duration(milliseconds: 300), curve: Curves.bounceInOut);
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColor.whiteColor,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Image(
-          image: AssetImage(
-            ImageAssets.smartlink,
-          ),
-          height: 160,
-          width: 160,
-        ),
-      ),
-      endDrawer: const CustomDrawerWidget(),
-      floatingActionButton: _isVisible
-          ? FloatingActionButton(
-              onPressed: scrollTo,
-              child: const Icon(Icons.arrow_upward),
-            )
-          : null,
-      body: Column(
-        children: [
-          const SizedBox(height: 20),
-          Expanded(
-            child: Container(
-              // height: MediaQuery.of(context).size.height * 0.8,
-              width: double.maxFinite,
-              decoration: BoxDecoration(
-                color: AppColor.whiteColor,
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: DefaultTabController(
-                length: 5, // Number of tab sets
-                child: Column(
-                  children: [
-                    TabBar(
-                      unselectedLabelColor: AppColor.greyColor,
-                      unselectedLabelStyle: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      indicatorSize: TabBarIndicatorSize.tab,
-                      physics: const BouncingScrollPhysics(),
-                      isScrollable: true,
-                      labelColor: AppColor.greenColor,
-                      labelStyle: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                      ),
-                      tabs: [
-                        Tab(text: 'All'.toUpperCase()),
-                        Tab(text: 'sales'.toUpperCase()),
-                        Tab(
-                          text: 'lettings'.toUpperCase(),
-                        ),
-                        Tab(text: 'commercial'.toUpperCase()),
-                        Tab(
-                          text: 'international'.toUpperCase(),
-                        ),
-                      ],
-                    ),
-                    Expanded(
-                      child: TabBarView(
-                        children: [
-                          // Content for Tab A1
-                          const PropertiesDataWidget(),
-                          // Content for Tab A2
-
-                          const PropertiesDataWidget(),
-                          // Content for Tab A3
-                          StampDutyCalculatorWidget(
-                            controller: _scrollController,
+    return Container(
+      height: MediaQuery.of(context).size.height*1 ,
+      width: MediaQuery.of(context).size.width,
+      child:  Consumer<PropertiesProvider>(
+        builder: (context, valueFeaturedData, child) =>
+            FutureBuilder<FeaturedPropertiesModel>(
+              future: valueFeaturedData.fetchFeaturedPropertiesData(),
+              builder: (context, snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.none:
+                    return const Text('No connection state yet');
+                  case ConnectionState.waiting:
+                    return const Center(child: CircularProgressIndicator());
+                  case ConnectionState.active:
+                  // Not commonly used, but here for demonstration
+                    return const Text('Connection is active');
+                  case ConnectionState.done:
+                    if (snapshot.hasError || snapshot.data == null) {
+                      return Text('Error: ${snapshot.error ?? "No Data"}');
+                    } else if (!snapshot.hasData) {
+                      return const Text('No Data');
+                    } else {
+                      // Use the data from the snapshot to build your UI
+                      return SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.6,
+                        width: double.maxFinite,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ListView.builder(
+                            physics: const BouncingScrollPhysics(),
+                            scrollDirection: Axis.vertical,
+                            itemCount: snapshot.data?.data!.results!.length,
+                            itemBuilder: (ctx, index) {
+                              var showData = snapshot.data?.data!.results![index];
+                              Color? containerColor = valueFeaturedData.getColorFromHex(
+                                  snapshot.data?.data!.results![index].tag!.color ??
+                                      "#FFFFFF");
+                              return PropertiesDataWidget(
+                                tagColor: containerColor,
+                                tagName: showData!.tag!.name.toString(),
+                                bathrooms:showData!.bathrooms == null? "No".toString() :showData!.bathrooms.toString(),
+                                bedrooms: showData!.bedrooms == null ? "No".toString(): showData!.bedrooms.toString(),
+                                category: showData!.category.toString(),
+                                city: showData!.city.toString(),
+                                name: showData!.name.toString(),
+                                prices: showData!.price.toString(),
+                                reception: showData!.reception == null? "No".toString():showData!.reception.toString(),
+                                zipCode: showData!.zipcode.toString(),
+                              );
+                            },
                           ),
-                          // A4
-                          const PropertiesDataWidget(),
-                          //5
-                          const PropertiesDataWidget(),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+                        ),
+                      );
+                    }
+                  default:
+                    return const Text('Unknown ConnectionState');
+                }
+              },
             ),
-          ),
-        ],
       ),
+
+
     );
   }
 }

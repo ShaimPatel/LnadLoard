@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:super_banners/super_banners.dart';
 
 import '../../../Provider/properties_provider.dart';
-import '../../Properties Page/all_properties_page.dart';
+import '../../Properties Page/properties_page.dart';
 
 class FeaturedPropertiesWidget extends StatefulWidget {
   const FeaturedPropertiesWidget({super.key});
@@ -51,6 +51,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print("This  is Called Every Time :: ");
     return Container(
       height: MediaQuery.of(context).size.height * 0.90,
       width: double.maxFinite,
@@ -86,9 +87,12 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                   case ConnectionState.none:
                     return const Text('No connection state yet');
                   case ConnectionState.waiting:
-                    return const Center(child: CircularProgressIndicator());
+                    return Container(
+                      width: MediaQuery.of(context).size.width*0.6,
+                      height: MediaQuery.of(context).size.height*0.6,
+                      color: Colors.red.shade300,
+                    );
                   case ConnectionState.active:
-                    // Not commonly used, but here for demonstration
                     return const Text('Connection is active');
                   case ConnectionState.done:
                     if (snapshot.hasError || snapshot.data == null) {
@@ -96,7 +100,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                     } else if (!snapshot.hasData) {
                       return const Text('No Data');
                     } else {
-                      // Use the data from the snapshot to build your UI
+                      //! Use the data from the snapshot to build your UI
                       return SizedBox(
                         height: MediaQuery.of(context).size.height * 0.6,
                         width: double.maxFinite,
@@ -265,7 +269,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                                         padding: const EdgeInsets.only(
                                             left: 10, top: 10),
                                         child: Text(
-                                          "${showData?.address} ${showData?.city}",
+                                          "${showData?.zipcode} ${showData?.city}",
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: const TextStyle(
@@ -278,7 +282,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                                         padding: const EdgeInsets.only(
                                             left: 10, top: 5),
                                         child: Text(
-                                          '${showData?.nearestStation!.name} , ${showData?.nearestStation!.distance}',
+                                          '${showData?.name} , ${showData?.nearestStation!.distance}',
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                           style: const TextStyle(
@@ -348,7 +352,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
           elevatedButton(
             "View all properties",
             () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (_) => const AllPropertiesPage())),
+                MaterialPageRoute(builder: (_) => const PropertiesPage())),
             150.0,
             15,
             AppColor.whiteColor,
