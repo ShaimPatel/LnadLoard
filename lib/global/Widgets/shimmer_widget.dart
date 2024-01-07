@@ -9,14 +9,15 @@ import '../../res/components/constrians.dart';
 class ShimmerWidget extends StatefulWidget {
   double widthSized;
   Axis scrollDirection;
-   ShimmerWidget({Key? key , required this.widthSized , required this.scrollDirection}) : super(key: key);
+  ShimmerWidget(
+      {Key? key, required this.widthSized, required this.scrollDirection})
+      : super(key: key);
 
   @override
   State<ShimmerWidget> createState() => _ShimmerWidgetState();
 }
 
 class _ShimmerWidgetState extends State<ShimmerWidget> {
-
   static const _shimmerGradient = LinearGradient(
     colors: [
       Color(0xFF00796B),
@@ -42,26 +43,28 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
         padding: const EdgeInsets.all(8.0),
         child: ListView.builder(
           physics: const BouncingScrollPhysics(),
-          scrollDirection: widget.scrollDirection!,
+          scrollDirection: widget.scrollDirection,
           itemCount: 3,
           itemBuilder: (ctx, index) {
             return Padding(
-              padding:widget.scrollDirection == Axis.horizontal?
-              const EdgeInsets.symmetric(horizontal: 3) :   const EdgeInsets.symmetric(vertical: 5),
+              padding: widget.scrollDirection == Axis.horizontal
+                  ? const EdgeInsets.symmetric(horizontal: 3)
+                  : const EdgeInsets.symmetric(vertical: 5),
               child: Shimmer(
                 gradient: _shimmerGradient,
-                child : Padding(
-                  padding:widget.scrollDirection == Axis.horizontal? EdgeInsets.zero : const EdgeInsets.all(8.0),
+                child: Padding(
+                  padding: widget.scrollDirection == Axis.horizontal
+                      ? EdgeInsets.zero
+                      : const EdgeInsets.all(8.0),
                   child: Container(
-                    width:widget.widthSized,
+                    width: widget.widthSized,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(
                           color: AppColor.greyColor,
                         )),
                     child: Column(
-                      crossAxisAlignment:
-                      CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Stack(
                           children: [
@@ -70,17 +73,12 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
                               width: double.maxFinite,
                               decoration: const BoxDecoration(
                                   borderRadius: BorderRadius.only(
-                                      topLeft:
-                                      Radius.circular(20),
-                                      topRight:
-                                      Radius.circular(20))),
+                                      topLeft: Radius.circular(20),
+                                      topRight: Radius.circular(20))),
                               child: const ClipRRect(
-                                borderRadius:
-                                 BorderRadius.only(
-                                    topLeft:
-                                    Radius.circular(15),
-                                    topRight:
-                                    Radius.circular(15)),
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(15),
+                                    topRight: Radius.circular(15)),
                                 child: Image(
                                   image: AssetImage(ImageAssets.contact),
                                   fit: BoxFit.cover,
@@ -93,25 +91,26 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
 
                         //!
                         Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Column(
                               children: [
                                 Container(
                                   height: 30,
-                                  width:widget.scrollDirection == Axis.horizontal? 75 : 170,
+                                  width:
+                                      widget.scrollDirection == Axis.horizontal
+                                          ? 75
+                                          : 170,
                                   decoration: BoxDecoration(
                                     color: Colors.blueGrey,
-                                    borderRadius:
-                                    BorderRadius.circular(5),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                 ),
                               ],
                             ),
                             elevatedButton(
                               "".toUpperCase(),
-                                  () => null,
+                              () => null,
                               80.0,
                               12,
                               AppColor.whiteColor,
@@ -123,74 +122,78 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
 
                         Padding(
                           padding: const EdgeInsets.only(
-                              left: 10, top: 10 , right: 10),
+                              left: 10, top: 10, right: 10),
                           child: Container(
                             height: 10,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
                               color: Colors.blueGrey,
-                              borderRadius:
-                              BorderRadius.circular(5),
+                              borderRadius: BorderRadius.circular(5),
                             ),
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
-                              left: 10, top: 10 , right: 10),
+                              left: 10, top: 10, right: 10),
                           child: Container(
                             height: 20,
                             width: double.maxFinite,
                             decoration: BoxDecoration(
                               color: Colors.blueGrey,
-                              borderRadius:
-                              BorderRadius.circular(5),
+                              borderRadius: BorderRadius.circular(5),
                             ),
                           ),
                         ),
                         //! Three
 
                         Padding(
-                          padding: const EdgeInsets.only(
-                              top: 5),
+                          padding: const EdgeInsets.only(top: 5),
                           child: SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, top: 10 , right: 10),
+                                      left: 10, top: 10, right: 10),
                                   child: Container(
                                     height: 20,
-                                    width:widget.scrollDirection == Axis.horizontal?50:100,
+                                    width: widget.scrollDirection ==
+                                            Axis.horizontal
+                                        ? 50
+                                        : 100,
                                     decoration: BoxDecoration(
                                       color: Colors.blueGrey,
-                                      borderRadius:
-                                      BorderRadius.circular(5),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, top: 10 , right: 10),
+                                      left: 10, top: 10, right: 10),
                                   child: Container(
                                     height: 20,
-                                    width: widget.scrollDirection == Axis.horizontal?50:100,
+                                    width: widget.scrollDirection ==
+                                            Axis.horizontal
+                                        ? 50
+                                        : 100,
                                     decoration: BoxDecoration(
                                       color: Colors.blueGrey,
-                                      borderRadius:
-                                      BorderRadius.circular(5),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                   ),
-                                ),Padding(
+                                ),
+                                Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, top: 10 , right: 10),
+                                      left: 10, top: 10, right: 10),
                                   child: Container(
                                     height: 20,
-                                    width: widget.scrollDirection == Axis.horizontal?50:100,
+                                    width: widget.scrollDirection ==
+                                            Axis.horizontal
+                                        ? 50
+                                        : 100,
                                     decoration: BoxDecoration(
                                       color: Colors.blueGrey,
-                                      borderRadius:
-                                      BorderRadius.circular(5),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                   ),
                                 ),
@@ -203,7 +206,7 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
                         Center(
                           child: elevatedButton(
                             "",
-                                () => null,
+                            () => null,
                             130.0,
                             15,
                             AppColor.whiteColor,
@@ -211,8 +214,8 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
                             25,
                           ),
                         ),
-                        if(widget.scrollDirection == Axis.vertical)
-                          SizedBox(height: 10),
+                        if (widget.scrollDirection == Axis.vertical)
+                          const SizedBox(height: 10),
                       ],
                     ),
                     //!

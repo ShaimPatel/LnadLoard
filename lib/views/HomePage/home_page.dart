@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -8,7 +10,9 @@ import 'package:landloard/views/HomePage/widgets/customer_says.dart';
 import 'package:landloard/views/HomePage/widgets/featured_properties_widget.dart';
 import 'package:landloard/views/HomePage/widgets/our_services.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
+
 import '../../global/Widgets/divider_widget.dart';
+import '../../global/Widgets/slider_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,13 +22,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final List sliderImage = [
-    ImageAssets.img2,
-    ImageAssets.img1,
-    ImageAssets.img3,
-    ImageAssets.img4,
-  ];
-
   final ScrollController _scrollController = ScrollController();
   bool _isVisible = false;
 
@@ -33,7 +30,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-
     _scrollController.addListener(() {
       if (_scrollController.position.userScrollDirection ==
           ScrollDirection.reverse) {
@@ -47,6 +43,12 @@ class _HomePageState extends State<HomePage> {
         });
       }
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _scrollController.dispose();
   }
 
   void scrollTo() {
@@ -155,8 +157,11 @@ class _HomePageState extends State<HomePage> {
         false;
   }
 
+  int i = 0;
+
   @override
   Widget build(BuildContext context) {
+    developer.log("${i++} Build Times ");
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
@@ -186,34 +191,7 @@ class _HomePageState extends State<HomePage> {
                 //! 1 Section for SALES AND RENT
                 Stack(
                   children: [
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.7,
-                      width: double.maxFinite,
-                      color: AppColor.whiteColor,
-                      child: CarouselSlider(
-                        items: sliderImage.map((logo) {
-                          return Builder(
-                            builder: (BuildContext context) {
-                              return Image.asset(
-                                logo,
-                                fit: BoxFit.cover,
-                              );
-                            },
-                          );
-                        }).toList(),
-                        options: CarouselOptions(
-                          autoPlay: true,
-                          enlargeCenterPage: false,
-                          aspectRatio: 1 / 5,
-                          autoPlayCurve: Curves.fastOutSlowIn,
-                          disableCenter: false,
-                          autoPlayInterval: const Duration(seconds: 2),
-                          autoPlayAnimationDuration:
-                              const Duration(milliseconds: 800),
-                          viewportFraction: 1,
-                        ),
-                      ),
-                    ),
+                    SliderWidget(),
                     Positioned(
                       top: MediaQuery.of(context).size.height * 0.1,
                       right: MediaQuery.of(context).size.width * 0.04,

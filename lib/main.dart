@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:landloard/Provider/properties_provider.dart';
+import 'package:landloard/Provider/slider_provider.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/splash_page.dart';
 import 'package:provider/provider.dart';
@@ -23,6 +24,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => PropertiesProvider()),
+        ChangeNotifierProvider(create: (_) => SliderProvider()),
+
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
