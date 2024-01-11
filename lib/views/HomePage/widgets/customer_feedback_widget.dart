@@ -2,12 +2,15 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../global/Widgets/divider_widget.dart';
+import '../../../global/app_data.dart';
+import '../../../res/assets/image_assets.dart';
 import '../../../res/colors/app_color.dart';
-import '../../HomePage/widgets/customer_says.dart';
+import 'customer_says.dart';
 
-class CustomerSaysWidgets extends StatelessWidget {
-  const CustomerSaysWidgets({super.key});
-
+class CustomerFeedbackWidget extends StatelessWidget {
+  const CustomerFeedbackWidget({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +39,10 @@ class CustomerSaysWidgets extends StatelessWidget {
           ),
           const SizedBox(height: 40),
           //!
-          SizedBox(
-            height: 300,
-            width: double.maxFinite,
-            child: CarouselSlider(
+          Expanded(
+            child: SizedBox(
+              width: double.maxFinite,
+              child: CarouselSlider(
                 options: CarouselOptions(
                     aspectRatio: MediaQuery.of(context).size.aspectRatio,
                     enlargeCenterPage: false,
@@ -50,9 +53,16 @@ class CustomerSaysWidgets extends StatelessWidget {
                     pauseAutoPlayOnTouch: true,
                     autoPlay: true,
                     viewportFraction: 1),
-                items: const [
-                  CustomerSaysWidget(),
-                ]),
+                items: AppData.userFeedback.map((e) {
+                  return CustomerSaysSection(
+                    ratingNumber: double.parse(e['ratingNumber']),
+                    userFeedback: e['UserComment'],
+                    userImage: const AssetImage(ImageAssets.user1),
+                    userName: e['userName'],
+                  );
+                }).toList(),
+              ),
+            ),
           ),
         ],
       ),

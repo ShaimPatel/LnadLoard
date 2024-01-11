@@ -4,8 +4,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:landloard/global/AppBar/drawer_widget.dart';
+import 'package:landloard/global/app_data.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
+import 'package:landloard/views/HomePage/widgets/customer_feedback_widget.dart';
 import 'package:landloard/views/HomePage/widgets/customer_says.dart';
 import 'package:landloard/views/HomePage/widgets/fetaured_data_widget.dart';
 import 'package:landloard/views/HomePage/widgets/our_services.dart';
@@ -326,53 +328,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 //! 4 Customre Says section
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  width: double.maxFinite,
-                  decoration: const BoxDecoration(color: AppColor.whiteColor),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 50),
-                      const Text(
-                        "Customer Says",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: AppColor.greenColor,
-                          fontSize: 25,
-                        ),
-                      ),
-                      const SizedBox(height: 25),
-                      CustomeDividerWidget(
-                        height: 1,
-                        color: AppColor.greyColor,
-                        thickness: 1,
-                        indent: 20,
-                        endIndent: 20,
-                      ),
-                      const SizedBox(height: 40),
-                      //!
-                      SizedBox(
-                        height: 300,
-                        width: double.maxFinite,
-                        child: CarouselSlider(
-                            options: CarouselOptions(
-                                aspectRatio:
-                                    MediaQuery.of(context).size.aspectRatio,
-                                enlargeCenterPage: false,
-                                reverse: false,
-                                // enableInfiniteScroll: true,
-                                initialPage: 1,
-                                scrollPhysics: const BouncingScrollPhysics(),
-                                pauseAutoPlayOnTouch: true,
-                                autoPlay: true,
-                                viewportFraction: 1),
-                            items: const [
-                              CustomerSaysWidget(),
-                            ]),
-                      ),
-                    ],
-                  ),
-                )
+                const CustomerFeedbackWidget()
               ],
             ),
           )),

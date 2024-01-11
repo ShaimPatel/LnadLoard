@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+
+import '../res/assets/image_assets.dart';
+
 class AppData {
   static const featureData = [
     {
@@ -1190,4 +1194,69 @@ class AppData {
     }
   ];
 
+//! custoer Says
+
+  static const List userFeedback = [
+    {
+      "userName": "Md Iftekhar Uddin Khan",
+      "ratingNumber": "5",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "I stayed their home for 42 months, I was very happy with their hospitality and service."
+    },
+    {
+      "userName": "Dan Pataca",
+      "ratingNumber": "3",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment": " “Good experience, very good communication, recommended.”"
+    },
+    {
+      "userName": "Rayan Group",
+      "ratingNumber": "4",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“Positive: Professionalism, Quality, Responsiveness, Value”"
+    },
+    {
+      "userName": "shahzad ali",
+      "ratingNumber": "4",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“Positive: Professionalism, Quality, Responsiveness, Value”"
+    },
+    {
+      "userName": "ZEESHAN N",
+      "ratingNumber": "2",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“Very nice service Helpful staff Very pleased with service.”"
+    },
+    {
+      "userName": "Shayne Williams",
+      "ratingNumber": "3",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“Positive: Professionalism, Responsiveness The process with Smart Link Estates went smoothly and within a 1-2days everything was sorted for us to proceed with getting the flat my girlfriend and I wanted. The online system they use references etc., was really user friendly and made everything much easier and quick. Thank you!”"
+    },
+    {
+      "userName": "Viorel Bojoga",
+      "ratingNumber": "5",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“We had a Great experience with SMARTLINK ESTATES. Good and prompt feedback thanks to Jay. He was always in time whenever we asked to see a property, or to have a meeting.”"
+    },
+    {
+      "userName": "Md Iftekhar Uddin Khan",
+      "ratingNumber": "3",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment":
+          "“I stayed their home for 42 months, I was very happy with their hospitality and service.”"
+    },
+    {
+      "userName": "Dan Pataca",
+      "ratingNumber": "5",
+      "userImage": AssetImage(ImageAssets.user1),
+      "UserComment": "“Good experience, very good communication, recommended.”"
+    },
+  ];
 }

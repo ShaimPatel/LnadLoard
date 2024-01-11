@@ -12,10 +12,10 @@ import 'package:landloard/views/Service%20Page/widgets/service_widget.dart';
 
 import '../../global/AppBar/drawer_widget.dart';
 import '../../res/assets/image_assets.dart';
+import '../HomePage/widgets/customer_feedback_widget.dart';
 import 'widgets/Mortgage_widget.dart';
 import 'widgets/commercial_sales_widgets.dart';
 import 'widgets/conveyancing_widget.dart';
-import 'widgets/customer_says_widget.dart';
 import 'widgets/our_services_table_widget.dart';
 import 'widgets/property_maintenance_widget.dart';
 
@@ -171,7 +171,7 @@ class _ServicePageState extends State<ServicePage> {
             const ConveyancingWidget(),
 
             //! 14 Customer Says
-            const CustomerSaysWidgets(),
+            const CustomerFeedbackWidget(),
           ],
         ),
       ),
