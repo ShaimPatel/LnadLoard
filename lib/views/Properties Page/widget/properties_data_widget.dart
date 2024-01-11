@@ -4,6 +4,7 @@ import 'package:super_banners/super_banners.dart';
 import '../../../global/Widgets/divider_widget.dart';
 import '../../../res/colors/app_color.dart';
 import '../../../res/components/constrians.dart';
+import '../../product_details_page.dart';
 
 class PropertiesDataWidget extends StatefulWidget {
   Color tagColor;
@@ -17,6 +18,7 @@ class PropertiesDataWidget extends StatefulWidget {
   String zipCode;
   String name;
   Widget houseImage;
+  String productId;
   PropertiesDataWidget({
     super.key,
     required this.tagColor,
@@ -30,6 +32,7 @@ class PropertiesDataWidget extends StatefulWidget {
     required this.zipCode,
     required this.name,
     required this.houseImage,
+    required this.productId,
   });
 
   @override
@@ -223,7 +226,12 @@ class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
                 Center(
                   child: elevatedButton(
                     "See details",
-                    () => null,
+                    () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ProductDetailsPage(
+                                  productId: widget.productId,
+                                ))),
                     180.0,
                     15,
                     AppColor.whiteColor,

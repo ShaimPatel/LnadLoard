@@ -86,6 +86,7 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
                             zipCode: showData.zipcode.toString(),
                             houseImage:
                                 decodeBase64Image(showData.images!.all![index]),
+                            productId: showData.id.toString(),
                           );
                         },
                       ),

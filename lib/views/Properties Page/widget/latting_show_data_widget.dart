@@ -78,6 +78,7 @@ class _LattingShowDataWidgetState extends State<LattingShowDataWidget> {
                             : showData.reception.toString(),
                         zipCode: showData.zipcode.toString(),
                         houseImage: decodeBase64Image(showData.images!.all![i]),
+                        productId: showData.id.toString(),
                       ),
                     );
                   }
