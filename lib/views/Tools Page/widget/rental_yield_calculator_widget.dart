@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:landloard/res/colors/app_color.dart';
 
-import '../../HomePage/widgets/featured_properties_widget.dart';
 import 'calculator_widget.dart';
 
 class RentalYieldCalculatorWidget extends StatefulWidget {
@@ -138,7 +137,7 @@ class _RentalYieldCalculatorWidgetState
                 ],
               ),
             ),
-            const FeaturedPropertiesWidget(),
+            // const FeaturedPropertiesWidget(),
           ],
         ),
       ),

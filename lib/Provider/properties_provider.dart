@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
 import 'package:landloard/Models/properties_data_model.dart';
 
 class PropertiesProvider extends ChangeNotifier {
@@ -29,17 +28,17 @@ class PropertiesProvider extends ChangeNotifier {
     }
   }
 
-Color getColorFromHex(String hexColor) {
-  hexColor = hexColor.replaceAll("#", "");
-  if (hexColor.length == 6) {
-    hexColor = "FF$hexColor"; // Add the alpha value if it's missing
+  Color getColorFromHex(String hexColor) {
+    hexColor = hexColor.replaceAll("#", "");
+    if (hexColor.length == 6) {
+      hexColor = "FF$hexColor"; // Add the alpha value if it's missing
+    }
+    try {
+      int parsedColor = int.parse(hexColor, radix: 16);
+      return Color(parsedColor);
+    } catch (e) {
+      print('Error parsing color: $e');
+      return Colors.transparent; // Return a default color in case of an error
+    }
   }
-  try {
-    int parsedColor = int.parse(hexColor, radix: 16);
-    return Color(parsedColor);
-  } catch (e) {
-    print('Error parsing color: $e');
-    return Colors.transparent; // Return a default color in case of an error
-  }
-}
 }

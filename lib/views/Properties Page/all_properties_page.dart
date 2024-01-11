@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../../Models/properties_data_model.dart';
 import '../../global/Widgets/shimmer_widget.dart';
+import '../../res/components/constrians.dart';
 
 class AllPropertiesPage extends StatefulWidget {
   const AllPropertiesPage({Key? key}) : super(key: key);
@@ -83,6 +84,8 @@ class _AllPropertiesPageState extends State<AllPropertiesPage> {
                                 ? "No".toString()
                                 : showData.reception.toString(),
                             zipCode: showData.zipcode.toString(),
+                            houseImage:
+                                decodeBase64Image(showData.images!.all![index]),
                           );
                         },
                       ),

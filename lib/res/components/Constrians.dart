@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:landloard/res/colors/app_color.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
 
 const customGradient1 = LinearGradient(
   colors: [Color.fromARGB(255, 245, 243, 123), Color.fromARGB(255, 0, 85, 85)],
@@ -104,4 +107,25 @@ Widget elevatedBorderButton(
       ),
     ),
   );
+}
+
+//! To decode the Base 64 Image
+
+Widget decodeBase64Image(String base64String) {
+  try {
+    List<String> parts = base64String.split(',');
+    if (parts.length != 2) {
+      throw const FormatException('Invalid base64 string');
+    }
+    Uint8List bytes = base64.decode(parts[1]);
+    return Image.memory(
+      bytes,
+      fit: BoxFit.cover,
+    );
+  } catch (e) {
+    if (kDebugMode) {
+      print('Error decoding image: $e');
+    }
+    return const Text('Error decoding image');
+  }
 }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:landloard/views/Tools%20Page/widget/calculator_widget.dart';
 
 import '../../../res/colors/app_color.dart';
-import '../../HomePage/widgets/featured_properties_widget.dart';
 
 class MortgageCalculatorWidget extends StatefulWidget {
   ScrollController? controller;
@@ -141,7 +140,7 @@ class _MortgageCalculatorWidgetState extends State<MortgageCalculatorWidget> {
                 ],
               ),
             ),
-            const FeaturedPropertiesWidget(),
+            // const FeaturedPropertiesWidget(),
           ],
         ),
       ),

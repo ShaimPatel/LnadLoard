@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:landloard/views/Tools%20Page/widget/calculator_widget.dart';
 
 import '../../../res/colors/app_color.dart';
-import '../../HomePage/widgets/featured_properties_widget.dart';
 
 class StampDutyCalculatorWidget extends StatefulWidget {
   ScrollController? controller;
@@ -164,7 +163,7 @@ class _StampDutyCalculatorWidgetState extends State<StampDutyCalculatorWidget> {
                 ],
               ),
             ),
-            const FeaturedPropertiesWidget(),
+            // const FeaturedPropertiesWidget(),
           ],
         ),
       ),

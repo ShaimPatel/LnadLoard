@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../../../Models/properties_data_model.dart';
 import '../../../Provider/properties_provider.dart';
 import '../../../global/Widgets/shimmer_widget.dart';
+import '../../../res/components/constrians.dart';
 
 class LattingShowDataWidget extends StatefulWidget {
   const LattingShowDataWidget({Key? key}) : super(key: key);
@@ -76,6 +77,7 @@ class _LattingShowDataWidgetState extends State<LattingShowDataWidget> {
                             ? "No".toString()
                             : showData.reception.toString(),
                         zipCode: showData.zipcode.toString(),
+                        houseImage: decodeBase64Image(showData.images!.all![i]),
                       ),
                     );
                   }

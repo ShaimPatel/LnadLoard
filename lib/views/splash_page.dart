@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_gif/flutter_gif.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/components/constrians.dart';
 import 'package:landloard/views/HomePage/home_page.dart';
@@ -54,7 +53,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children:  [
+          children: [
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,

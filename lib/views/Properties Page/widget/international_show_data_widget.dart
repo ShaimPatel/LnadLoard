@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../../../Models/properties_data_model.dart';
 import '../../../Provider/properties_provider.dart';
 import '../../../global/Widgets/shimmer_widget.dart';
+import '../../../res/components/constrians.dart';
 
 class InternationalShowDataWidget extends StatefulWidget {
   const InternationalShowDataWidget({Key? key}) : super(key: key);
@@ -78,6 +79,7 @@ class _InternationalShowDataWidgetState
                             ? "No".toString()
                             : showData.reception.toString(),
                         zipCode: showData.zipcode.toString(),
+                        houseImage: decodeBase64Image(showData.images!.all![i]),
                       ),
                     );
                   }

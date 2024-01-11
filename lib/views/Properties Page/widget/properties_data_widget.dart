@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:super_banners/super_banners.dart';
 
-import '../../../Provider/properties_provider.dart';
 import '../../../global/Widgets/divider_widget.dart';
-import '../../../res/assets/image_assets.dart';
 import '../../../res/colors/app_color.dart';
 import '../../../res/components/constrians.dart';
 
@@ -19,6 +16,7 @@ class PropertiesDataWidget extends StatefulWidget {
   String city;
   String zipCode;
   String name;
+  Widget houseImage;
   PropertiesDataWidget({
     super.key,
     required this.tagColor,
@@ -31,6 +29,7 @@ class PropertiesDataWidget extends StatefulWidget {
     required this.city,
     required this.zipCode,
     required this.name,
+    required this.houseImage,
   });
 
   @override
@@ -38,14 +37,6 @@ class PropertiesDataWidget extends StatefulWidget {
 }
 
 class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
-  List imageList = [
-    ImageAssets.img1,
-    ImageAssets.img2,
-    ImageAssets.img3,
-    ImageAssets.img4,
-    ImageAssets.img5,
-  ];
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -74,19 +65,16 @@ class _PropertiesDataWidgetState extends State<PropertiesDataWidget> {
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(20),
                               topRight: Radius.circular(20))),
-                      child: const ClipRRect(
-                        borderRadius: BorderRadius.only(
+                      child: ClipRRect(
+                        borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(15),
                             topRight: Radius.circular(15)),
-                        child: Image(
-                          image: AssetImage(ImageAssets.services),
-                          fit: BoxFit.cover,
-                        ),
+                        child: widget.houseImage,
                       ),
                     ),
                     Positioned(
-                      left: 0, // Adjust the left position as needed
-                      top: 0, // Adjust the top position as needed
+                      left: 0,
+                      top: 0,
                       child: CornerBanner(
                         bannerPosition: CornerBannerPosition.topLeft,
                         bannerColor: widget.tagColor,

@@ -7,7 +7,7 @@ import 'package:landloard/global/AppBar/drawer_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/HomePage/widgets/customer_says.dart';
-import 'package:landloard/views/HomePage/widgets/featured_properties_widget.dart';
+import 'package:landloard/views/HomePage/widgets/fetaured_data_widget.dart';
 import 'package:landloard/views/HomePage/widgets/our_services.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
 
@@ -191,7 +191,8 @@ class _HomePageState extends State<HomePage> {
                 //! 1 Section for SALES AND RENT
                 Stack(
                   children: [
-                    SliderWidget(),
+                    //!
+                    const SliderWidget(),
                     Positioned(
                       top: MediaQuery.of(context).size.height * 0.1,
                       right: MediaQuery.of(context).size.width * 0.04,
@@ -257,7 +258,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 //!2 Section for Featured Properties
-                const FeaturedPropertiesWidget(),
+                const FeaturedDataWidget(),
                 //! 3 Service section
                 Container(
                   height: MediaQuery.of(context).size.height * 1.2,
