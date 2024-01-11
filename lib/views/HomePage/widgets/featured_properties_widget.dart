@@ -260,8 +260,8 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                 () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (_) => const ProductDetailsPage(
-                            // productId: widget.productId,
+                        builder: (_) => ProductDetailsPage(
+                              productId: widget.productId,
                             ))),
                 130.0,
                 15,

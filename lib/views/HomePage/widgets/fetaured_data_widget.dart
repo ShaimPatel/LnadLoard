@@ -116,7 +116,7 @@ class _FeaturedDataWidgetState extends State<FeaturedDataWidget> {
                                 zipCode: showData.zipcode.toString(),
                                 houseImage: decodeBase64Image(
                                     showData.images!.all![index]),
-                                productId: "",
+                                productId: showData.id.toString(),
                               );
                             },
                           ),
