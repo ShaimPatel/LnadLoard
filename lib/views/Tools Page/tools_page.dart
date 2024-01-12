@@ -101,9 +101,7 @@ class _ToolsPageState extends State<ToolsPage> {
                       tabs: [
                         Tab(text: 'Mortgage Calculator'.toUpperCase()),
                         Tab(text: 'Rental Yield Calculator'.toUpperCase()),
-                        Tab(
-                          text: 'Stamp Duty Calculator'.toUpperCase(),
-                        ),
+                        Tab(text: 'Stamp Duty Calculator'.toUpperCase()),
                       ],
                     ),
                     Expanded(

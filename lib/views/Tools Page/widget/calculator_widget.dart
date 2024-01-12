@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import 'package:landloard/res/colors/app_color.dart';
@@ -6,12 +7,13 @@ import 'package:landloard/res/colors/app_color.dart';
 class CalculatorWidget extends StatefulWidget {
   TextEditingController controller;
   String title, hintText;
-
+  FocusNode? focusNode;
   CalculatorWidget({
     Key? key,
     required this.controller,
     required this.title,
     required this.hintText,
+    this.focusNode,
   }) : super(key: key);
 
   @override
@@ -36,17 +38,23 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
             ),
           ),
           const SizedBox(height: 10),
-          TextField(
-            controller: widget.controller,
-            decoration: InputDecoration(
-              hintText: widget.hintText,
-              border: const OutlineInputBorder(),
-              fillColor: AppColor.whiteColor,
-              filled: true,
+          SizedBox(
+            width: double.maxFinite,
+            child: TextField(
+              focusNode: widget.focusNode,
+              controller: widget.controller,
+              keyboardType: TextInputType.number,
+              dragStartBehavior: DragStartBehavior.down,
+              decoration: InputDecoration(
+                hintText: widget.hintText,
+                border: const OutlineInputBorder(),
+                fillColor: AppColor.whiteColor,
+                filled: true,
+              ),
+              onChanged: (text) {
+                print('Entered text: $text');
+              },
             ),
-            onChanged: (text) {
-              print('Entered text: $text');
-            },
           ),
         ],
       ),
