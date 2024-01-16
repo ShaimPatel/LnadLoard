@@ -2,12 +2,12 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_offline/flutter_offline.dart';
 import 'package:landloard/global/AppBar/drawer_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/HomePage/widgets/customer_feedback_widget.dart';
 import 'package:landloard/views/HomePage/widgets/fetaured_data_widget.dart';
-import 'package:landloard/views/HomePage/widgets/our_services.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
 
 import '../../global/Widgets/slider_widget.dart';
@@ -163,108 +163,142 @@ class _HomePageState extends State<HomePage> {
     developer.log("${i++} Build Times ");
     return WillPopScope(
       onWillPop: showExitPopup,
-      child: Scaffold(
-          appBar: AppBar(
-            automaticallyImplyLeading: false,
-            title: const Image(
-              image: AssetImage(
-                ImageAssets.smartlink,
-              ),
-              height: 160,
-              width: 160,
-            ),
-          ),
-          endDrawer: const CustomDrawerWidget(),
-          floatingActionButton: _isVisible
-              ? FloatingActionButton(
-                  onPressed: scrollTo,
-                  child: const Icon(Icons.arrow_upward),
-                )
-              : null,
-          body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            controller: _scrollController,
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                //! 1 Section for SALES AND RENT
-                Stack(
-                  children: [
-                    //!
-                    const SliderWidget(),
-                    Positioned(
-                      top: MediaQuery.of(context).size.height * 0.1,
-                      right: MediaQuery.of(context).size.width * 0.04,
-                      left: MediaQuery.of(context).size.width * 0.04,
-                      child: const Center(
-                        child: Text(
-                          "Search your dream home",
+      child: OfflineBuilder(
+        debounceDuration: Duration.zero,
+        connectivityBuilder: (
+          BuildContext ctx,
+          ConnectivityResult connectivity,
+          Widget child,
+        ) {
+          if (connectivity == ConnectivityResult.none) {
+            return Scaffold(
+              backgroundColor: Colors.green[100],
+              body: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  CircularProgressIndicator(),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25),
+                    child: Center(
+                      child: Text('Please check your internet connection!',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: AppColor.whiteColor),
-                        ),
-                      ),
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                          )),
                     ),
-                    Positioned(
-                      bottom: MediaQuery.of(context).size.height * 0.06,
-                      right: MediaQuery.of(context).size.width * 0.04,
-                      left: MediaQuery.of(context).size.width * 0.04,
-                      child: Container(
-                        height: MediaQuery.of(context).size.height * 0.5,
-                        width: double.maxFinite,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25),
-                        ),
-                        child: DefaultTabController(
-                          length: 2, // Number of tab sets
-                          child: Column(
-                            children: [
-                              TabBar(
-                                unselectedLabelColor: AppColor.greyColor,
-                                unselectedLabelStyle: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                                labelColor: AppColor.greenColor,
-                                labelStyle: const TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                                tabs: [
-                                  Tab(text: 'Sale'.toUpperCase()),
-                                  Tab(
-                                    text: 'Rent'.toUpperCase(),
-                                  ),
-                                ],
-                              ),
-                              const Expanded(
-                                child: TabBarView(
-                                  children: [
-                                    // Content for Tab A1
-                                    SalesWidget(),
-                                    // Content for Tab A2
-                                    SalesWidget(),
-                                  ],
-                                ),
-                              ),
-                            ],
+                  ),
+                ],
+              ),
+            );
+          }
+          return child;
+        },
+        child: Scaffold(
+            appBar: AppBar(
+              automaticallyImplyLeading: false,
+              title: const Image(
+                image: AssetImage(
+                  ImageAssets.smartlink,
+                ),
+                height: 160,
+                width: 160,
+              ),
+            ),
+            endDrawer: const CustomDrawerWidget(),
+            floatingActionButton: _isVisible
+                ? FloatingActionButton(
+                    onPressed: scrollTo,
+                    child: const Icon(Icons.arrow_upward),
+                  )
+                : null,
+            body: SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              controller: _scrollController,
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  //! 1 Section for SALES AND RENT
+                  Stack(
+                    children: [
+                      //!
+                      const SliderWidget(),
+                      Positioned(
+                        top: MediaQuery.of(context).size.height * 0.1,
+                        right: MediaQuery.of(context).size.width * 0.04,
+                        left: MediaQuery.of(context).size.width * 0.04,
+                        child: const Center(
+                          child: Text(
+                            "Search your dream home",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                                color: AppColor.whiteColor),
                           ),
                         ),
                       ),
-                    )
-                  ],
-                ),
-                //!2 Section for Featured Properties
-                const FeaturedDataWidget(),
-                //! 3 Service section
-                const OurServiceSection(),
-                //! 4 Customre Says section
-                const CustomerFeedbackWidget()
-              ],
-            ),
-          )),
+                      Positioned(
+                        bottom: MediaQuery.of(context).size.height * 0.06,
+                        right: MediaQuery.of(context).size.width * 0.04,
+                        left: MediaQuery.of(context).size.width * 0.04,
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.5,
+                          width: double.maxFinite,
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                          child: DefaultTabController(
+                            length: 2, // Number of tab sets
+                            child: Column(
+                              children: [
+                                TabBar(
+                                  unselectedLabelColor: AppColor.greyColor,
+                                  unselectedLabelStyle: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                  labelColor: AppColor.greenColor,
+                                  labelStyle: const TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                  tabs: [
+                                    Tab(text: 'Sale'.toUpperCase()),
+                                    Tab(
+                                      text: 'Rent'.toUpperCase(),
+                                    ),
+                                  ],
+                                ),
+                                const Expanded(
+                                  child: TabBarView(
+                                    children: [
+                                      // Content for Tab A1
+                                      SalesWidget(),
+                                      // Content for Tab A2
+                                      SalesWidget(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  //!2 Section for Featured Properties
+                  const FeaturedDataWidget(),
+                  //! 3 Service section
+                  const OurServiceSection(),
+                  //! 4 Customre Says section
+                  const CustomerFeedbackWidget()
+                ],
+              ),
+            )),
+      ),
     );
   }
 }
