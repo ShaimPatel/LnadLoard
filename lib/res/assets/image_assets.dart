@@ -23,6 +23,10 @@ class ImageAssets {
 
   static const String wrongImage = 'images/F_OTP.png';
   static const String correctImage = 'images/T_OTP.png';
+  static const String newProperties = 'images/new_properties.png';
+  static const String buildingImage = 'images/building.png';
+  static const String maintainanceImage = 'images/maint.png';
+  static const String rentImage = 'images/rent.png';
 
   //! CompanyLogos
   static const String clientMoney = 'images/companyLogo/clientMoney.png';

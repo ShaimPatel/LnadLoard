@@ -8,10 +8,10 @@ import 'package:landloard/views/Service%20Page/widgets/enquire_widget.dart';
 import 'package:landloard/views/Service%20Page/widgets/landlords_widget.dart';
 import 'package:landloard/views/Service%20Page/widgets/let_and_management_widgets.dart';
 import 'package:landloard/views/Service%20Page/widgets/residential_sales_widget.dart';
-import 'package:landloard/views/Service%20Page/widgets/service_widget.dart';
 
 import '../../global/AppBar/drawer_widget.dart';
 import '../../res/assets/image_assets.dart';
+import '../HomePage/our_service_section.dart';
 import '../HomePage/widgets/customer_feedback_widget.dart';
 import 'widgets/Mortgage_widget.dart';
 import 'widgets/commercial_sales_widgets.dart';
@@ -87,7 +87,7 @@ class _ServicePageState extends State<ServicePage> {
         child: Column(
           children: [
             //! 1 section ..
-            const ServicesWidgets(),
+            const OurServiceSection(),
             //! 2 section
             const LandLordsWidget(),
             //! 3 Residential Sales

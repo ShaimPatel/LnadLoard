@@ -19,7 +19,7 @@ class _SliderWidgetState extends State<SliderWidget> {
     ImageAssets.img2,
     ImageAssets.img1,
     ImageAssets.img3,
-    ImageAssets.img4,
+    ImageAssets.img2,
   ];
   int i = 0;
   @override

@@ -11,6 +11,7 @@ import 'package:landloard/views/HomePage/widgets/our_services.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
 
 import '../../global/Widgets/slider_widget.dart';
+import 'our_service_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -258,71 +259,7 @@ class _HomePageState extends State<HomePage> {
                 //!2 Section for Featured Properties
                 const FeaturedDataWidget(),
                 //! 3 Service section
-                Container(
-                  height: MediaQuery.of(context).size.height * 1.2,
-                  width: double.maxFinite,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                  ),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 30),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 20),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: OurServiceWidget(
-                                icon: Icons.home,
-                                onPres: () {},
-                                title: "Our Properties",
-                                subtitle: "We have best property Only for you",
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: OurServiceWidget(
-                                icon: Icons.person_2_rounded,
-                                onPres: () {},
-                                title: "Property for Sale",
-                                subtitle:
-                                    "Best possible price in the shortest possible time.",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 20),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: OurServiceWidget(
-                                icon: Icons.home,
-                                onPres: () {},
-                                title: "Property Maintenance",
-                                subtitle:
-                                    "Expert maintenance and compliance to protect your asset.",
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: OurServiceWidget(
-                                icon: Icons.person_2_rounded,
-                                onPres: () {},
-                                title: "Property for Rent",
-                                subtitle:
-                                    "Would you like to search in the following?",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                const OurServiceSection(),
                 //! 4 Customre Says section
                 const CustomerFeedbackWidget()
               ],
