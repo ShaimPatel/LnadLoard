@@ -28,7 +28,7 @@ class BarrowWidget extends StatelessWidget {
                   color: AppColor.greenColor),
             ),
             const SizedBox(height: 5),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greenColor,
               endIndent: 10,
             ),

@@ -25,9 +25,6 @@ class _CommercialShowDataWidgetState extends State<CommercialShowDataWidget> {
 
   @override
   Widget build(BuildContext context) {
-    var checkCategory = Provider.of<PropertiesProvider>(context, listen: true)
-        .fetchFeaturedPropertiesData();
-
     return Consumer<PropertiesProvider>(
       builder: (context, valueFeaturedData, child) =>
           FutureBuilder<FeaturedPropertiesModel>(

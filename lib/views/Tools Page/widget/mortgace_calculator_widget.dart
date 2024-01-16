@@ -9,8 +9,8 @@ import '../../../res/colors/app_color.dart';
 import '../../HomePage/widgets/fetaured_data_widget.dart';
 
 class MortgageCalculatorWidget extends StatefulWidget {
-  ScrollController? controller;
-  MortgageCalculatorWidget({
+  final ScrollController? controller;
+  const MortgageCalculatorWidget({
     Key? key,
     this.controller,
   }) : super(key: key);
@@ -320,7 +320,8 @@ class _MortgageCalculatorWidgetState extends State<MortgageCalculatorWidget> {
                                               ),
                                               enabled: false,
                                               onChanged: (text) {
-                                                print('Entered text: $text');
+                                                debugPrint(
+                                                    'Entered text: $text');
                                               },
                                             ),
                                           ),
@@ -360,7 +361,8 @@ class _MortgageCalculatorWidgetState extends State<MortgageCalculatorWidget> {
                                               ),
                                               enabled: false,
                                               onChanged: (text) {
-                                                print('Entered text: $text');
+                                                debugPrint(
+                                                    'Entered text: $text');
                                               },
                                             ),
                                           ),

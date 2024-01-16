@@ -28,7 +28,7 @@ class PropertyMaintenanceWidget extends StatelessWidget {
                     color: AppColor.greenColor),
               ),
               const SizedBox(height: 5),
-              CustomeDividerWidget(
+              const CustomeDividerWidget(
                 color: AppColor.greenColor,
                 endIndent: 10,
               ),
@@ -52,7 +52,7 @@ class PropertyMaintenanceWidget extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: const Image(
-                    image: AssetImage(ImageAssets.commercial),
+                    image: AssetImage(ImageAssets.commercialComp),
                     fit: BoxFit.cover,
                   ),
                 ),

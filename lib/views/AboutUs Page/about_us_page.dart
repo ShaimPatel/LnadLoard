@@ -87,7 +87,7 @@ class _AboutUsPageState extends State<AboutUsPage> {
                 ),
                 const SizedBox(height: 20),
                 // Divider
-                CustomeDividerWidget(
+                const CustomeDividerWidget(
                   color: AppColor.greyColor,
                   endIndent: 5,
                   indent: 5,

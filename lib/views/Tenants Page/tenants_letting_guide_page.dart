@@ -21,7 +21,7 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
   //!
   final ScrollController scrollController = ScrollController();
   bool _isVisible = false;
-  bool? is_Expanded = false;
+  bool? isExpanded = false;
 
   @override
   void initState() {
@@ -89,7 +89,7 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
                       color: AppColor.greenColor),
                 ),
               ),
-              CustomeDividerWidget(
+              const CustomeDividerWidget(
                 color: AppColor.greenColor,
               ),
               Padding(
@@ -97,7 +97,7 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
                 child: ExpansionPanelList.radio(
                   expansionCallback: (int index, bool isExpanded) {
                     setState(() {
-                      is_Expanded = !isExpanded;
+                      isExpanded = !isExpanded;
                     });
                   },
                   elevation: 2,
@@ -110,8 +110,6 @@ class _TenantsLettingGuidePageState extends State<TenantsLettingGuidePage> {
                       .map<ExpansionPanelRadio>(
                     (MapEntry<int, Map<String, String>> entry) {
                       final int index = entry.key;
-                      final Map<String, String> panel = entry.value;
-
                       return ExpansionPanelRadio(
                         headerBuilder: (BuildContext context, bool isExpanded) {
                           return Padding(

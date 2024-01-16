@@ -52,7 +52,7 @@ class CustomDrawerWidget extends StatelessWidget {
             },
           ),
 
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -118,7 +118,7 @@ class CustomDrawerWidget extends StatelessWidget {
             ],
           ),
 
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -139,7 +139,7 @@ class CustomDrawerWidget extends StatelessWidget {
                   MaterialPageRoute(builder: (contex) => const ServicePage()));
             },
           ),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -160,7 +160,7 @@ class CustomDrawerWidget extends StatelessWidget {
                   MaterialPageRoute(builder: (contex) => const ToolsPage()));
             },
           ),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -181,7 +181,7 @@ class CustomDrawerWidget extends StatelessWidget {
                   builder: (contex) => const LandLoardPage()));
             },
           ),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -230,7 +230,7 @@ class CustomDrawerWidget extends StatelessWidget {
               ),
             ],
           ),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,
@@ -251,7 +251,7 @@ class CustomDrawerWidget extends StatelessWidget {
                   MaterialPageRoute(builder: (contex) => const AboutUsPage()));
             },
           ),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 4,
             thickness: 1,
             color: AppColor.greyColor,

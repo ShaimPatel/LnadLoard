@@ -6,10 +6,10 @@ import 'package:landloard/global/Widgets/divider_widget.dart';
 import '../../../res/colors/app_color.dart';
 
 class OurServiceWidget extends StatefulWidget {
-  IconData icon;
-  String title, subtitle;
-  Function onPres;
-  OurServiceWidget({
+  final IconData icon;
+  final String title, subtitle;
+  final Function onPres;
+  const OurServiceWidget({
     Key? key,
     required this.icon,
     required this.title,
@@ -74,7 +74,7 @@ class _OurServiceWidgetState extends State<OurServiceWidget> {
               ),
             ),
             const SizedBox(height: 10),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               height: 2,
               thickness: 2,
               color: AppColor.greenColor,

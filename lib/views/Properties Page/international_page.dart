@@ -21,10 +21,10 @@ class InternationalPage extends StatelessWidget {
         ),
       ),
       endDrawer: const CustomDrawerWidget(),
-      body:Container(
-        height: MediaQuery.of(context).size.height*1,
+      body: SizedBox(
+        height: MediaQuery.of(context).size.height * 1,
         width: MediaQuery.of(context).size.width,
-        child: InternationalShowDataWidget(),
+        child: const InternationalShowDataWidget(),
       ),
     );
   }

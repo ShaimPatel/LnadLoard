@@ -1,19 +1,15 @@
 import 'dart:developer' as developer;
 
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:landloard/global/AppBar/drawer_widget.dart';
-import 'package:landloard/global/app_data.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/views/HomePage/widgets/customer_feedback_widget.dart';
-import 'package:landloard/views/HomePage/widgets/customer_says.dart';
 import 'package:landloard/views/HomePage/widgets/fetaured_data_widget.dart';
 import 'package:landloard/views/HomePage/widgets/our_services.dart';
 import 'package:landloard/views/HomePage/widgets/sales_widget.dart';
 
-import '../../global/Widgets/divider_widget.dart';
 import '../../global/Widgets/slider_widget.dart';
 
 class HomePage extends StatefulWidget {

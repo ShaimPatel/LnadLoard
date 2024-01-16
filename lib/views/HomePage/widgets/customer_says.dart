@@ -5,11 +5,11 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:landloard/res/colors/app_color.dart';
 
 class CustomerSaysSection extends StatelessWidget {
-  AssetImage userImage;
-  double ratingNumber;
-  String userName;
-  String userFeedback;
-  CustomerSaysSection({
+  final AssetImage userImage;
+  final double ratingNumber;
+  final String userName;
+  final String userFeedback;
+  const CustomerSaysSection({
     Key? key,
     required this.userImage,
     required this.ratingNumber,
@@ -62,7 +62,7 @@ class CustomerSaysSection extends StatelessWidget {
                         color: Colors.amber,
                       ),
                       onRatingUpdate: (rating) {
-                        print(rating);
+                        debugPrint(rating.toString());
                       },
                     ),
                     const SizedBox(height: 5),

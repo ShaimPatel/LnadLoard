@@ -11,19 +11,19 @@ import 'package:landloard/res/components/constrians.dart';
 import '../../product_details_page.dart';
 
 class FeaturedPropertiesWidget extends StatefulWidget {
-  Color tagColor;
-  String tagName;
-  String prices;
-  String category;
-  String bedrooms;
-  String bathrooms;
-  String reception;
-  String city;
-  String zipCode;
-  String name;
-  Widget houseImage;
-  String productId;
-  FeaturedPropertiesWidget({
+  final Color tagColor;
+  final String tagName;
+  final String prices;
+  final String category;
+  final String bedrooms;
+  final String bathrooms;
+  final String reception;
+  final String city;
+  final String zipCode;
+  final String name;
+  final Widget houseImage;
+  final String productId;
+  const FeaturedPropertiesWidget({
     Key? key,
     required this.tagColor,
     required this.tagName,
@@ -176,7 +176,7 @@ class _FeaturedPropertiesWidgetState extends State<FeaturedPropertiesWidget> {
                           fontWeight: FontWeight.bold,
                           color: AppColor.greenColor),
                     ),
-                    CustomeDividerWidget(
+                    const CustomeDividerWidget(
                       thickness: 3,
                       color: AppColor.greenColor,
                       height: 4,

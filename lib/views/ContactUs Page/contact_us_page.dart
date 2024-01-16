@@ -58,12 +58,6 @@ class _ContactUsPageState extends State<ContactUsPage> {
     zoom: 14.4746,
   );
 
-  static const CameraPosition _kLake = CameraPosition(
-      bearing: 192.8334901395799,
-      target: LatLng(37.43296265331129, -122.08832357078792),
-      tilt: 59.440717697143555,
-      zoom: 19.151926040649414);
-
 //! for Controlling the scrolling
   final ScrollController _scrollController = ScrollController();
   bool _isVisible = false;
@@ -199,7 +193,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
               ),
             ),
             const SizedBox(height: 15),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               thickness: 1,
               height: 1,
               color: AppColor.greyColor,

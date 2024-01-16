@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:landloard/res/colors/app_color.dart';
 
 class CalculatorWidget extends StatefulWidget {
-  TextEditingController controller;
-  String title, hintText;
-  FocusNode? focusNode;
-  CalculatorWidget({
+  final TextEditingController controller;
+  final String title, hintText;
+  final FocusNode? focusNode;
+  const CalculatorWidget({
     Key? key,
     required this.controller,
     required this.title,
@@ -52,7 +52,7 @@ class _CalculatorWidgetState extends State<CalculatorWidget> {
                 filled: true,
               ),
               onChanged: (text) {
-                print('Entered text: $text');
+                debugPrint('Entered text: $text');
               },
             ),
           ),

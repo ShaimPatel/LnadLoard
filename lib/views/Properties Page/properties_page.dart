@@ -4,14 +4,11 @@ import 'package:landloard/views/Properties%20Page/all_properties_page.dart';
 import 'package:landloard/views/Properties%20Page/widget/commercial_show_data_widget.dart';
 import 'package:landloard/views/Properties%20Page/widget/international_show_data_widget.dart';
 import 'package:landloard/views/Properties%20Page/widget/latting_show_data_widget.dart';
-import 'package:landloard/views/Properties%20Page/widget/properties_data_widget.dart';
 import 'package:landloard/views/Properties%20Page/widget/sales_show_data_widget.dart';
-import 'package:landloard/views/Tools%20Page/widget/stamp_duty_calculator_widget.dart';
 
 import '../../global/AppBar/drawer_widget.dart';
 import '../../res/assets/image_assets.dart';
 import '../../res/colors/app_color.dart';
-import '../HomePage/widgets/sales_widget.dart';
 
 class PropertiesPage extends StatefulWidget {
   const PropertiesPage({super.key});
@@ -100,13 +97,9 @@ class _PropertiesPageState extends State<PropertiesPage> {
                       tabs: [
                         Tab(text: 'All'.toUpperCase()),
                         Tab(text: 'sales'.toUpperCase()),
-                        Tab(
-                          text: 'lettings'.toUpperCase()
-                        ),
+                        Tab(text: 'lettings'.toUpperCase()),
                         Tab(text: 'commercial'.toUpperCase()),
-                        Tab(
-                          text: 'international'.toUpperCase()
-                        ),
+                        Tab(text: 'international'.toUpperCase()),
                       ],
                     ),
                     const Expanded(
@@ -122,7 +115,6 @@ class _PropertiesPageState extends State<PropertiesPage> {
                           CommercialShowDataWidget(),
                           //5
                           InternationalShowDataWidget(),
-
                         ],
                       ),
                     ),

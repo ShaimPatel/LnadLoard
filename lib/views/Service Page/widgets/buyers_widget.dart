@@ -16,22 +16,22 @@ class BuyersWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 15),
-            const Text(
+          children: const [
+            SizedBox(height: 15),
+            Text(
               "Buyers",
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
             CustomeDividerWidget(
               color: AppColor.greenColor,
               endIndent: 10,
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Guide to buying a property",
               style: TextStyle(
                 fontSize: 17,
@@ -39,8 +39,8 @@ class BuyersWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "A step-by-step guide to each stage of buying a property",
               style: TextStyle(
                 fontSize: 17,
@@ -48,8 +48,8 @@ class BuyersWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "we will help you all the way",
               style: TextStyle(
                 fontSize: 17,
@@ -57,8 +57,8 @@ class BuyersWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP1 : Register to get your competitive advantage",
               style: TextStyle(
                 fontSize: 15,
@@ -66,8 +66,8 @@ class BuyersWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               """The London sales market can be extremely competitive and fast-moving, but we can give
 buyers that register with us an unfair advantage.
 By registering your requirements, we can help you be the first through the door of newly listed homes.""",
@@ -77,8 +77,8 @@ By registering your requirements, we can help you be the first through the door 
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP2 : Are you selling too?",
               style: TextStyle(
                 fontSize: 15,
@@ -86,8 +86,8 @@ By registering your requirements, we can help you be the first through the door 
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               """If your move will involve selling your current home it is advisable to advertise your current property before looking for a new home.
 Being ready to sell means you are less likely to miss out on your dream home""",
               style: TextStyle(
@@ -96,8 +96,8 @@ Being ready to sell means you are less likely to miss out on your dream home""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP3 : Find the right property",
               style: TextStyle(
                 fontSize: 15,
@@ -105,8 +105,8 @@ Being ready to sell means you are less likely to miss out on your dream home""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               """With hundreds of new listings each week, we will help you find the right property.
 We can also keep you constantly up-to-date via email and text alerts, even before properties get listed on all the top property portals. """,
               style: TextStyle(
@@ -115,8 +115,8 @@ We can also keep you constantly up-to-date via email and text alerts, even befor
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP4 : Viewings",
               style: TextStyle(
                 fontSize: 15,
@@ -124,8 +124,8 @@ We can also keep you constantly up-to-date via email and text alerts, even befor
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               """Book your viewing online or in the office.
 We will chauffeur you to your viewings ensuring you arrive in a relaxed frame of mind and accompany you throughout so that we are on hand to answer any questions immediately and advise where necessary. """,
               style: TextStyle(
@@ -134,8 +134,8 @@ We will chauffeur you to your viewings ensuring you arrive in a relaxed frame of
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP5 : Making an offer",
               style: TextStyle(
                 fontSize: 15,
@@ -143,8 +143,8 @@ We will chauffeur you to your viewings ensuring you arrive in a relaxed frame of
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               """Once you find your perfect property you can make an offer online or with your agent.
 Let us know if there any special conditions of the offer and we will communicate this to the seller.""",
               style: TextStyle(
@@ -153,7 +153,7 @@ Let us know if there any special conditions of the offer and we will communicate
                 color: AppColor.blackColor,
               ),
             ),
-            const Text(
+            Text(
               """At this point you may need to demonstrate that you can proceed by providing evidence of your mortgage in principle and solicitor details.
 There are no legal obligations on either side until contracts are signed.""",
               style: TextStyle(
@@ -162,8 +162,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP6 : Offer accepted",
               style: TextStyle(
                 fontSize: 15,
@@ -171,8 +171,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Once you accept an offer we will do the following:",
               style: TextStyle(
                 fontSize: 17,
@@ -180,8 +180,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Prepare a memorandum of sale",
               style: TextStyle(
                 fontSize: 17,
@@ -189,8 +189,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Confirm the agreed price with all parties",
               style: TextStyle(
                 fontSize: 17,
@@ -198,8 +198,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Confirm your solicitor & mortgage details",
               style: TextStyle(
                 fontSize: 17,
@@ -207,8 +207,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "You will now need to instruct your solicitor to proceed with the conveyancing process and your mortgage broker to proceed with your application.",
               style: TextStyle(
                 fontSize: 17,
@@ -216,8 +216,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP7 : Conveyancing",
               style: TextStyle(
                 fontSize: 15,
@@ -225,8 +225,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "As part of the conveyancing process your solicitor will do the following:",
               style: TextStyle(
                 fontSize: 17,
@@ -234,8 +234,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Raise any enquiries on receipt of the draft contract from the seller’s solicitor",
               style: TextStyle(
                 fontSize: 17,
@@ -243,8 +243,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Request their own local searches",
               style: TextStyle(
                 fontSize: 17,
@@ -252,8 +252,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Agree on a date for exchange of contracts",
               style: TextStyle(
                 fontSize: 17,
@@ -261,8 +261,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "We will assist your solicitor and negotiate throughout the process, keeping you informed every step of the way.",
               style: TextStyle(
                 fontSize: 17,
@@ -270,8 +270,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP8 : Survey and mortgage offer",
               style: TextStyle(
                 fontSize: 15,
@@ -279,8 +279,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "A survey of the property will be booked by a surveyor on behalf of the mortgage lender to identify any structural problems and advise on the property’s value.",
               style: TextStyle(
                 fontSize: 17,
@@ -288,8 +288,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "After the mortgage valuation report is received, a formal mortgage offer will be sent to you and your solicitor which you will need to sign before it is returned.",
               style: TextStyle(
                 fontSize: 17,
@@ -297,8 +297,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "There are no legal obligations until contracts are signed.",
               style: TextStyle(
                 fontSize: 17,
@@ -306,8 +306,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP9 : Exchange of contracts",
               style: TextStyle(
                 fontSize: 15,
@@ -315,8 +315,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Exchange of contracts occurs when all enquiries have been confirmed and agreed.",
               style: TextStyle(
                 fontSize: 17,
@@ -324,8 +324,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               """ Once the contract has been signed by both parties the deposit (usually 10% of the purchase price) will be transferred online or paid in the form of a banker’s draft from your solicitor to the seller’s solicitor.""",
               style: TextStyle(
                 fontSize: 17,
@@ -333,8 +333,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "The completion date is then set by mutual agreement.",
               style: TextStyle(
                 fontSize: 17,
@@ -342,8 +342,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "STEP10 : Completion",
               style: TextStyle(
                 fontSize: 15,
@@ -351,8 +351,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Completion is when the residual monies (usually 90%) are transferred from your solicitor tothe seller’s solicitor’s account.",
               style: TextStyle(
                 fontSize: 17,
@@ -360,8 +360,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "We will release the keys once the money has cleared in the seller’s account.",
               style: TextStyle(
                 fontSize: 17,
@@ -369,8 +369,8 @@ There are no legal obligations on either side until contracts are signed.""",
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 5),
-            const Text(
+            SizedBox(height: 5),
+            Text(
               "Congratulations, you are now the legal owner of your new home!",
               style: TextStyle(
                 fontSize: 17,

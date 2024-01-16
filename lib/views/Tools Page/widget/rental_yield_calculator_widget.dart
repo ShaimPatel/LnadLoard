@@ -8,9 +8,9 @@ import '../../HomePage/widgets/fetaured_data_widget.dart';
 import 'calculator_widget.dart';
 
 class RentalYieldCalculatorWidget extends StatefulWidget {
-  ScrollController? controller;
+  final ScrollController? controller;
 
-  RentalYieldCalculatorWidget({
+  const RentalYieldCalculatorWidget({
     Key? key,
     this.controller,
   }) : super(key: key);
@@ -246,7 +246,7 @@ class _RentalYieldCalculatorWidgetState
                                             ),
                                             enabled: false,
                                             onChanged: (text) {
-                                              print('Entered text: $text');
+                                              debugPrint('Entered text: $text');
                                             },
                                           ),
                                         ),
@@ -285,7 +285,7 @@ class _RentalYieldCalculatorWidgetState
                                             ),
                                             enabled: false,
                                             onChanged: (text) {
-                                              print('Entered text: $text');
+                                              debugPrint('Entered text: $text');
                                             },
                                           ),
                                         ),

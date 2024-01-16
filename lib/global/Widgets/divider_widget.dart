@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 
 class CustomeDividerWidget extends StatelessWidget {
-  double? height, endIndent, indent, thickness;
-  Color? color;
+  final double? height, endIndent, indent, thickness;
+  final Color? color;
 
-  CustomeDividerWidget(
+  const CustomeDividerWidget(
       {Key? key,
       this.thickness,
       this.color,

@@ -9,35 +9,20 @@ void main() {
   runApp(const MyApp());
 }
 
-// void main() => runApp(
-//       DevicePreview(
-//         enabled: !kReleaseMode,
-//         builder: (context) => const MyApp(), // Wrap your app
-//       ),
-//     );
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => PropertiesProvider()),
-        ChangeNotifierProvider(create: (_) => SliderProvider()),
-
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // useInheritedMediaQuery: true,
-        // locale: DevicePreview.locale(context),
-        // builder: DevicePreview.appBuilder,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: AppColor.greenColor,
-        ),
-        home: const SplashPage(),
-      ),
-    );
+        providers: [
+          ChangeNotifierProvider(create: (_) => PropertiesProvider()),
+          ChangeNotifierProvider(create: (_) => SliderProvider()),
+        ],
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: ThemeData(primarySwatch: AppColor.greenColor),
+            home: const SplashPage()));
   }
 }

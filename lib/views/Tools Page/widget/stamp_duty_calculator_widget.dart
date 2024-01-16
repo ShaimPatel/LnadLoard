@@ -7,9 +7,9 @@ import '../../HomePage/widgets/fetaured_data_widget.dart';
 import 'calculator_widget.dart';
 
 class StampDutyCalculatorWidget extends StatefulWidget {
-  ScrollController? controller;
+  final ScrollController? controller;
 
-  StampDutyCalculatorWidget({
+  const StampDutyCalculatorWidget({
     Key? key,
     this.controller,
   }) : super(key: key);
@@ -242,7 +242,7 @@ class _StampDutyCalculatorWidgetState extends State<StampDutyCalculatorWidget> {
                                           ),
                                           enabled: false,
                                           onChanged: (text) {
-                                            print('Entered text: $text');
+                                            debugPrint('Entered text: $text');
                                           },
                                         ),
                                       ),

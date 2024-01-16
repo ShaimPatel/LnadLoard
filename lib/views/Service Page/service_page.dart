@@ -108,7 +108,7 @@ class _ServicePageState extends State<ServicePage> {
                   color: AppColor.greenColor),
             ),
             const SizedBox(height: 5),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greenColor,
               endIndent: 10,
             ),
@@ -135,22 +135,22 @@ class _ServicePageState extends State<ServicePage> {
                 padding: const EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: 15),
-                    const Text(
+                  children: const [
+                    SizedBox(height: 15),
+                    Text(
                       "Speak to an expert, local mortgage adviser",
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                           color: AppColor.greenColor),
                     ),
-                    const SizedBox(height: 5),
+                    SizedBox(height: 5),
                     CustomeDividerWidget(
                       color: AppColor.greenColor,
                       endIndent: 10,
                     ),
-                    const SizedBox(height: 15),
-                    const Text(
+                    SizedBox(height: 15),
+                    Text(
                       """Smart Link Estates are connected by a network of local financial advisors. We can arrange a no obligation appointment for you whether buying, selling, renting or considering being a landlord.""",
                       style: TextStyle(
                         fontSize: 17,

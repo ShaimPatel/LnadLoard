@@ -45,7 +45,7 @@ class _FeaturedDataWidgetState extends State<FeaturedDataWidget> {
             ),
           ),
           const SizedBox(height: 10),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 1,
             color: AppColor.greyColor,
             thickness: 1,
@@ -58,7 +58,7 @@ class _FeaturedDataWidgetState extends State<FeaturedDataWidget> {
                 FutureBuilder<FeaturedPropertiesModel>(
               future: valueFeaturedData.fetchFeaturedPropertiesData(),
               builder: (context, snapshot) {
-                print(snapshot.connectionState);
+                debugPrint(snapshot.connectionState.toString());
                 switch (snapshot.connectionState) {
                   case ConnectionState.none:
                     return const Text('No connection state yet');

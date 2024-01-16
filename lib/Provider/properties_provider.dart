@@ -23,7 +23,7 @@ class PropertiesProvider extends ChangeNotifier {
         throw Exception('Failed to load data: ${response.statusCode}');
       }
     } catch (e) {
-      print('Exception during data fetch: $e');
+      debugPrint('Exception during data fetch: $e');
       throw Exception('Failed to load data: $e');
     }
   }
@@ -37,7 +37,7 @@ class PropertiesProvider extends ChangeNotifier {
       int parsedColor = int.parse(hexColor, radix: 16);
       return Color(parsedColor);
     } catch (e) {
-      print('Error parsing color: $e');
+      debugPrint('Error parsing color: $e');
       return Colors.transparent; // Return a default color in case of an error
     }
   }

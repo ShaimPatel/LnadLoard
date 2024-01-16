@@ -17,7 +17,6 @@ class RightToRentPage extends StatefulWidget {
 
 class _RightToRentPageState extends State<RightToRentPage> {
   bool _isVisible = false;
-  final bool _isExpanded = false;
 
   final ScrollController scrollController = ScrollController();
 
@@ -89,7 +88,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     color: AppColor.greenColor),
               ),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greenColor,
             ),
             Padding(
@@ -110,7 +109,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     .map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
                         return Padding(
@@ -185,7 +184,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     color: AppColor.greenColor),
               ),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -227,7 +226,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     color: AppColor.greenColor),
               ),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -248,7 +247,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     .map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
@@ -322,7 +321,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -340,7 +339,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                 children: AppData.faq.asMap().entries.map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
@@ -412,7 +411,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
 
@@ -426,7 +425,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -445,7 +444,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     AppData.movingIn.asMap().entries.map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
@@ -518,7 +517,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -537,7 +536,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     AppData.payingRent.asMap().entries.map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
@@ -612,7 +611,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -631,7 +630,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     AppData.movingOut.asMap().entries.map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
+                    // final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {
@@ -705,7 +704,7 @@ class _RightToRentPageState extends State<RightToRentPage> {
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            CustomeDividerWidget(
+            const CustomeDividerWidget(
               color: AppColor.greyColor,
             ),
             Padding(
@@ -724,7 +723,6 @@ class _RightToRentPageState extends State<RightToRentPage> {
                     AppData.deposit.asMap().entries.map<ExpansionPanelRadio>(
                   (MapEntry<int, Map<String, String>> entry) {
                     final int index = entry.key;
-                    final Map<String, String> panel = entry.value;
 
                     return ExpansionPanelRadio(
                       headerBuilder: (BuildContext context, bool isExpanded) {

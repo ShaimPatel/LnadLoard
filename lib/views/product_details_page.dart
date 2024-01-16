@@ -15,8 +15,8 @@ import 'HomePage/widgets/fetaured_data_widget.dart';
 import 'dart:developer' as developer;
 
 class ProductDetailsPage extends StatefulWidget {
-  String productId;
-  ProductDetailsPage({
+  final String productId;
+  const ProductDetailsPage({
     Key? key,
     required this.productId,
   }) : super(key: key);
@@ -33,6 +33,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       appBar: AppBar(
         title: const Text("Details Page"),
         actions: [
+          //! Calling the Provder of Propeerties
           Consumer<PropertiesProvider>(
             builder: (context, valueFeaturedData, child) =>
                 FutureBuilder<FeaturedPropertiesModel>(
@@ -46,7 +47,6 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                         padding: EdgeInsets.only(bottom: 8.0, right: 10),
                         child: Center());
                   case ConnectionState.active:
-                    // Not commonly used, but here for demonstration
                     return const Text('Connection is active');
                   case ConnectionState.done:
                     if (snapshot.hasError || snapshot.data == null) {
@@ -55,7 +55,6 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                       return const Text('No Data');
                     } else {
                       var dataLength = snapshot.data!.data!.results!;
-                      // developer.log("${dataLength.length}");
                       for (int i = 0; i < dataLength.length; i++) {
                         var showData = dataLength[i];
                         if (showData.id == widget.productId) {
@@ -173,7 +172,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                             onTap: () {
                                               developer.log("Ha bhai");
 
-                                              print("Char raha hai");
+                                              debugPrint("Char raha hai");
                                               carouselController
                                                   .animateToPage(entry.key);
                                               sliderUpdatedValue
@@ -227,7 +226,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                                       color: AppColor.greenColor),
                                 ),
                                 const SizedBox(height: 10),
-                                CustomeDividerWidget(
+                                const CustomeDividerWidget(
                                   height: 2,
                                   color: AppColor.greyColor,
                                   thickness: 1,
@@ -410,7 +409,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                             ),
                           ),
                           const SizedBox(height: 10),
-                          CustomeDividerWidget(
+                          const CustomeDividerWidget(
                             height: 2,
                             color: AppColor.greyColor,
                             thickness: 2,

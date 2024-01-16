@@ -16,22 +16,22 @@ class MortgageWidget extends StatelessWidget {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 15),
-            const Text(
+          children: const [
+            SizedBox(height: 15),
+            Text(
               "Mortgage",
               style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                   color: AppColor.greenColor),
             ),
-            const SizedBox(height: 5),
+            SizedBox(height: 5),
             CustomeDividerWidget(
               color: AppColor.greenColor,
               endIndent: 10,
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Smart Link Estates can introduce Financial Advisors to help find you the perfect home",
               style: TextStyle(
                 fontSize: 18,
@@ -39,8 +39,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Financial services with Smart Link Estates. We've got you covered.",
               style: TextStyle(
                 fontSize: 18,
@@ -48,8 +48,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 15),
-            const Text(
+            SizedBox(height: 15),
+            Text(
               """We know, buying, selling or letting a property is one of the most difficult decisions and toughest decisions to make. It is important therefore, as well as you choosing the right property, you have your finances in place before making any move.
 """,
               style: TextStyle(
@@ -58,8 +58,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "How we can help",
               style: TextStyle(
                 fontSize: 17,
@@ -67,8 +67,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 10),
-            const Text(
+            SizedBox(height: 10),
+            Text(
               "Expert advice",
               style: TextStyle(
                 fontSize: 17,
@@ -76,8 +76,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 3),
-            const Text(
+            SizedBox(height: 3),
+            Text(
               "Moving home",
               style: TextStyle(
                 fontSize: 17,
@@ -85,8 +85,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 3),
-            const Text(
+            SizedBox(height: 3),
+            Text(
               "First-time buyer",
               style: TextStyle(
                 fontSize: 17,
@@ -94,8 +94,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 3),
-            const Text(
+            SizedBox(height: 3),
+            Text(
               "Remortgage",
               style: TextStyle(
                 fontSize: 17,
@@ -103,8 +103,8 @@ class MortgageWidget extends StatelessWidget {
                 color: AppColor.blackColor,
               ),
             ),
-            const SizedBox(height: 3),
-            const Text(
+            SizedBox(height: 3),
+            Text(
               "Buy-to-let",
               style: TextStyle(
                 fontSize: 17,

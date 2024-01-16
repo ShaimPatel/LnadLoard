@@ -10,22 +10,21 @@ class CommercialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: const Image(
-          image: AssetImage(
-            ImageAssets.smartlink,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: const Image(
+            image: AssetImage(
+              ImageAssets.smartlink,
+            ),
+            height: 160,
+            width: 160,
           ),
-          height: 160,
-          width: 160,
         ),
-      ),
-      endDrawer: const CustomDrawerWidget(),
-      body: Container(
-        height: MediaQuery.of(context).size.height*1,
-        width: MediaQuery.of(context).size.width,
-        child: CommercialShowDataWidget(),
-      )
-    );
+        endDrawer: const CustomDrawerWidget(),
+        body: SizedBox(
+          height: MediaQuery.of(context).size.height * 1,
+          width: MediaQuery.of(context).size.width,
+          child: const CommercialShowDataWidget(),
+        ));
   }
 }

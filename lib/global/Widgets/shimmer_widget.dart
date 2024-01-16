@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -7,9 +6,9 @@ import '../../res/colors/app_color.dart';
 import '../../res/components/constrians.dart';
 
 class ShimmerWidget extends StatefulWidget {
-  double widthSized;
-  Axis scrollDirection;
-  ShimmerWidget(
+  final double widthSized;
+  final Axis scrollDirection;
+  const ShimmerWidget(
       {Key? key, required this.widthSized, required this.scrollDirection})
       : super(key: key);
 
@@ -80,7 +79,7 @@ class _ShimmerWidgetState extends State<ShimmerWidget> {
                                     topLeft: Radius.circular(15),
                                     topRight: Radius.circular(15)),
                                 child: Image(
-                                  image: AssetImage(ImageAssets.contact),
+                                  image: AssetImage(ImageAssets.img4),
                                   fit: BoxFit.cover,
                                 ),
                               ),

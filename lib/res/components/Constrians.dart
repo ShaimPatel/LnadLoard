@@ -124,7 +124,7 @@ Widget decodeBase64Image(String base64String) {
     );
   } catch (e) {
     if (kDebugMode) {
-      print('Error decoding image: $e');
+      debugPrint('Error decoding image: $e');
     }
     return const Text('Error decoding image');
   }

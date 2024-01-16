@@ -30,7 +30,7 @@ class CustomerFeedbackWidget extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 25),
-          CustomeDividerWidget(
+          const CustomeDividerWidget(
             height: 1,
             color: AppColor.greyColor,
             thickness: 1,

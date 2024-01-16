@@ -19,7 +19,7 @@ class _LandLoardPageState extends State<LandLoardPage> {
   //!
   final ScrollController scrollController = ScrollController();
   bool _isVisible = false;
-  bool? is_Expanded = false;
+  bool? isExpanded = false;
 
   @override
   void initState() {
@@ -87,7 +87,7 @@ class _LandLoardPageState extends State<LandLoardPage> {
                       color: AppColor.greenColor),
                 ),
               ),
-              CustomeDividerWidget(
+              const CustomeDividerWidget(
                 color: AppColor.greenColor,
               ),
               Padding(
@@ -95,7 +95,7 @@ class _LandLoardPageState extends State<LandLoardPage> {
                 child: ExpansionPanelList.radio(
                   expansionCallback: (int index, bool isExpanded) {
                     setState(() {
-                      is_Expanded = !isExpanded;
+                      isExpanded = !isExpanded;
                     });
                   },
                   elevation: 2,
@@ -108,7 +108,7 @@ class _LandLoardPageState extends State<LandLoardPage> {
                       .map<ExpansionPanelRadio>(
                     (MapEntry<int, Map<String, String>> entry) {
                       final int index = entry.key;
-                      final Map<String, String> panel = entry.value;
+                      // final Map<String, String> panel = entry.value;
 
                       return ExpansionPanelRadio(
                         headerBuilder: (BuildContext context, bool isExpanded) {
