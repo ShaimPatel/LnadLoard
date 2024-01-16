@@ -9,6 +9,7 @@ import 'package:landloard/global/Widgets/divider_widget.dart';
 import 'package:landloard/res/assets/image_assets.dart';
 import 'package:landloard/res/colors/app_color.dart';
 import 'package:landloard/res/components/constrians.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactUsPage extends StatefulWidget {
   const ContactUsPage({super.key});
@@ -36,6 +37,18 @@ class _ContactUsPageState extends State<ContactUsPage> {
     ImageAssets.technosysinfowareltd,
     ImageAssets.zoopla,
   ];
+  _launchEmail(String email) async {
+    final Uri emailLaunchUri = Uri(
+      scheme: 'mailto',
+      path: email,
+    );
+
+    if (await canLaunchUrl(Uri.parse(emailLaunchUri.toString()))) {
+      await launchUrl(Uri.parse(emailLaunchUri.toString()));
+    } else {
+      throw 'Could not launch email';
+    }
+  }
 
   final Completer<GoogleMapController> _controller =
       Completer<GoogleMapController>();
@@ -304,7 +317,7 @@ class _ContactUsPageState extends State<ContactUsPage> {
             Container(
               height: MediaQuery.of(context).size.height * 1.6,
               width: double.maxFinite,
-              color: Colors.grey,
+              color: Colors.grey.shade300,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -341,14 +354,16 @@ class _ContactUsPageState extends State<ContactUsPage> {
                     title: Text("Mon - Fri 10am-6pm "),
                     subtitle: Text("Saturday Appointments Only"),
                   ),
-                  const ListTile(
-                    leading: CircleAvatar(
+                  ListTile(
+                    leading: const CircleAvatar(
                       child: Icon(
                         Icons.mail,
                         color: AppColor.yellowColor,
                       ),
                     ),
-                    title: Text("info@smartlinkestates.com"),
+                    title: InkWell(
+                        onTap: () => _launchEmail('info@smartlinkestates.com'),
+                        child: const Text("info@smartlinkestates.com")),
                   ),
                   const ListTile(
                     leading: CircleAvatar(
