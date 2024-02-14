@@ -754,21 +754,21 @@ class _RightToRentPageState extends State<RightToRentPage> {
                         child: SingleChildScrollView(
                           child: Row(
                             children: [
-                              Container(
-                                  // height:
-                                  //     MediaQuery.of(context).size.height /
-                                  //         3,
-                                  // width: 10,
-                                  decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 5,
-                                  color: Colors.red,
-                                ),
-                                borderRadius: const BorderRadius.only(
-                                    topLeft: Radius.circular(8),
-                                    bottomLeft: Radius.circular(8)),
-                                color: AppColor.greenColor,
-                              )),
+                              // Container(
+                              //     // height:
+                              //     //     MediaQuery.of(context).size.height /
+                              //     //         3,
+                              //     // width: 10,
+                              //     decoration: BoxDecoration(
+                              //   border: Border.all(
+                              //     width: 5,
+                              //     color: Colors.red,
+                              //   ),
+                              //   borderRadius: const BorderRadius.only(
+                              //       topLeft: Radius.circular(8),
+                              //       bottomLeft: Radius.circular(8)),
+                              //   color: AppColor.greenColor,
+                              // )),
                               Expanded(
                                 child: Html(
                                     data: AppData.deposit[index]
